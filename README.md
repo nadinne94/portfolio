@@ -10,6 +10,9 @@
 </div>
 
 ## Projetos
+
+### Python + SQL
+* **[Análise de Vendas](https://github.com/nadinne94/analise_vendas)**
 ### SQL
 * **<a href="https://github.com/nadinne94/employeedataset">Explorando a Força de Trabalho</a>**
 * **<a href="https://github.com/nadinne94/dannys_diner">Danny's Diner</a>**
