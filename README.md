@@ -7,21 +7,34 @@
     Na minha jornada na área de dados, busquei aprimorar minhas habilidades no tratamento e limpeza de dados, consultas e análises exploratórias. Adquiri expertise em gerenciamento de bancos de dados, linguagem SQL e diversos SGBDs, como MySQL, SQL Server, PostgreSQL e Oracle. Também desenvolvi proficiência em linguagem Python, Jupyter Notebook e Anaconda. No Power BI, não apenas o utilizei como ferramenta de Data Viz, mas também para o tratamento de dados, Power Query e criação de dashboards.
   </p>
 
-</div>
-
 ## Projetos
 
-### Python + SQL
-* **[Análise de Vendas](https://github.com/nadinne94/analise_vendas)**
+### Análise de Vendas
+Apresenta uma abordagem abrangente na compreensão do comportamento de compra de clientes por meio de uma análise exploratória descritiva. Utilizando técnicas de manipulação de dados, o objetivo principal é oferecer insights que orientem estratégias de negócios e impulsionem o crescimento das vendas.
+
+**Ferramentas:** Python(Jupyter Notebook), SQL(postgreSQL)
+
+* **[Clique aqui](https://github.com/nadinne94/analise_vendas)**
+
+### Explorando a Força de Trabalho
+O trabalho foi realizado com o objetivo de investigar as variáveis que impactam a distribuição dos funcionários em uma empresa, utilizando um extenso conjunto de dados de recursos humanos.
+
+**Ferramentas:** SQL(postgreSQL)
+
+* **[Clique aqui](https://github.com/nadinne94/employeedataset)**
+
 ### SQL
-* **<a href="https://github.com/nadinne94/employeedataset">Explorando a Força de Trabalho</a>**
+
 * **<a href="https://github.com/nadinne94/dannys_diner">Danny's Diner</a>**
-* **<a href="https://github.com/nadinne94/pizza_runner">Pizza Runner</a>**
 
 ### Power BI
 * **<a href="https://www.behance.net/gallery/180165445/IMDB-Top-10000-Filmes">IMDB TOP Filmes</a>**
 * **[Performance de Vendas](https://app.powerbi.com/view?r=eyJrIjoiNzY3MTQ3MTMtOGY1Zi00OWZkLTk4MDQtZWY3Mjk2YjUzYTVmIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)**
 * **[Campanha de Marketing](https://app.powerbi.com/view?r=eyJrIjoiM2RmNTIxMGEtMDFmZS00ODI3LTliNzgtOTdlMWRhYjJiMjNlIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)**
+
+</div>
+
+<br>
 
 ## Contato
 <div align="left">
