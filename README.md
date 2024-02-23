@@ -1,43 +1,47 @@
 # Portfólio
 <div align="justify">
   <p>
-    Minha formação em Engenharia Civil estabeleceu uma base sólida em resolução de problemas complexos, pensamento analítico e habilidades matemáticas. Na área da engenharia, destaco-me na gestão de equipe, liderando operações no canteiro de obras e mantendo interações diretas com fornecedores e clientes. Ao gerenciar uma loja de semijoias, aprofundei-me no empreendedorismo e no marketing digital. Essas experiências proporcionaram não apenas uma compreensão abrangente de diversos cenários, mas também aprimoraram habilidades práticas, como liderança de equipe, resolução de problemas e estratégias de marketing.
+    Com formação em Engenharia Civil, estive em cargos de liderança de equipes e operações, além de ter atuado no empreendedorismo e marketing digital.
   </p>
   <p>
-    Na minha jornada na área de dados, busquei aprimorar minhas habilidades no tratamento e limpeza de dados, consultas e análises exploratórias. Adquiri expertise em gerenciamento de bancos de dados, linguagem SQL e diversos SGBDs, como MySQL, SQL Server, PostgreSQL e Oracle. Também desenvolvi proficiência em linguagem Python, Jupyter Notebook e Anaconda. No Power BI, não apenas o utilizei como ferramenta de Data Viz, mas também para o tratamento de dados, Power Query e criação de dashboards.
+    Como analista de dados, tenho experiência em gerenciamento de bancos de dados, tratamento e limpeza, <i>queries</i> e análises exploratórias com Python e SQL. Também estou familiarizada com ferramentas para tratatamento e visualização de dados como Excel e Power BI.
   </p>
-
+  <p>
+    Minha experiência anterior como líder de equipe e gestora fortaleceu minha habilidade de resolver problemas complexos e pensar analiticamente, capacidades cruciais na análise de dados. Além disso, minha habilidade comprovada de interagir efetivamente com fornecedores e clientes durante meus papéis anteriores tem sido inestimável na comunicação e colaboração em projetos de análise de dados.
+  </p>
+  
 ## Projetos
 
-### Projeto de Análise das Empresas Listadas na Forbes
-Neste projeto, buscamos compreender os elementos subjacentes que contribuem para o sucesso das empresas de destaque, bem como explorar a possibilidade de identificar padrões e tendências emergentes desses dados. Além de mapear a posição das empresas no mercado global, nossa análise se estende à investigação dos setores que concentram as empresas mais valiosas e à mapear a distribuição geográfica dessas empresas.
+### Análise Exploratória
 
-**Ferramentas:** Python
+#### _[Projeto de Análise das Empresas Listadas na Forbes](https://github.com/nadinne94/forbes_global2000_2023)_
+ - Neste projeto, buscamos compreender os elementos subjacentes que contribuem para o sucesso das empresas de destaque, bem como explorar a possibilidade de identificar padrões e tendências emergentes desses dados. Além de mapear a posição das empresas no mercado global, nossa análise se estende à investigação dos setores que concentram as empresas mais valiosas e à mapear a distribuição geográfica dessas empresas.
 
-* **[Clique aqui](https://github.com/nadinne94/forbes_global2000_2023)**
+    **Ferramentas:** Python
 
-### Análise de Vendas
-Apresenta uma abordagem abrangente na compreensão do comportamento de compra de clientes por meio de uma análise exploratória descritiva. Utilizando técnicas de manipulação de dados, o objetivo principal é oferecer insights que orientem estratégias de negócios e impulsionem o crescimento das vendas.
+#### _[Análise de Vendas](https://github.com/nadinne94/analise_vendas)_
+- Apresenta uma abordagem abrangente na compreensão do comportamento de compra de clientes por meio de uma análise exploratória descritiva. Utilizando técnicas de manipulação de dados, o objetivo principal é oferecer insights que orientem estratégias de negócios e impulsionem o crescimento das vendas.
 
-**Ferramentas:** Python(Jupyter Notebook), SQL(postgreSQL)
+  **Ferramentas:** Python(Jupyter Notebook), SQL(postgreSQL)
 
-* **[Clique aqui](https://github.com/nadinne94/analise_vendas)**
+#### _[Explorando a Força de Trabalho](https://github.com/nadinne94/employeedataset)_
+- O trabalho foi realizado com o objetivo de investigar as variáveis que impactam a distribuição dos funcionários em uma empresa, utilizando um extenso conjunto de dados de recursos humanos.
 
-### Explorando a Força de Trabalho
-O trabalho foi realizado com o objetivo de investigar as variáveis que impactam a distribuição dos funcionários em uma empresa, utilizando um extenso conjunto de dados de recursos humanos.
+  **Ferramentas:** SQL(postgreSQL)
 
-**Ferramentas:** SQL(postgreSQL)
+#### _[Danny's Diner](https://github.com/nadinne94/dannys_diner)_
 
-* **[Clique aqui](https://github.com/nadinne94/employeedataset)**
+  - Análise dos dados de um restaurante fictício
+    
+    **Ferramentas:** SQL(SQLServer)
 
-### SQL
+    
 
-* **[Danny's Diner](https://github.com/nadinne94/dannys_diner)**
+### Dashboard - Power BI
 
-### Power BI
-* **[IMDB TOP Filmes](https://www.behance.net/gallery/180165445/IMDB-Top-10000-Filmes)**
-* **[Performance de Vendas](https://app.powerbi.com/view?r=eyJrIjoiNzY3MTQ3MTMtOGY1Zi00OWZkLTk4MDQtZWY3Mjk2YjUzYTVmIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)**
-* **[Campanha de Marketing](https://app.powerbi.com/view?r=eyJrIjoiM2RmNTIxMGEtMDFmZS00ODI3LTliNzgtOTdlMWRhYjJiMjNlIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)**
+#### *[IMDB TOP Filmes](https://www.behance.net/gallery/180165445/IMDB-Top-10000-Filmes)*
+#### *[Performance de Vendas](https://app.powerbi.com/view?r=eyJrIjoiNzY3MTQ3MTMtOGY1Zi00OWZkLTk4MDQtZWY3Mjk2YjUzYTVmIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)*
+#### *[Campanha de Marketing](https://app.powerbi.com/view?r=eyJrIjoiM2RmNTIxMGEtMDFmZS00ODI3LTliNzgtOTdlMWRhYjJiMjNlIiwidCI6IjdmYTg3YmQ3LTU0NzgtNDQ4Yy05Yjk2LWYzYjZjNGEwYzliMCJ9)*
 
 </div>
 
