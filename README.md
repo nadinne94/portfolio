@@ -14,7 +14,7 @@
 
 ### Análise Exploratória
 
-#### _[Projeto de Análise das Empresas Listadas na Forbes](https://github.com/nadinne94/forbes_global2000_2023)_
+#### _[Projeto de Análise das Empresas Listadas na Forbes](https://github.com/nadinne94/projeto_forbes_2023)_
  - Neste projeto, buscamos compreender os elementos subjacentes que contribuem para o sucesso das empresas de destaque, bem como explorar a possibilidade de identificar padrões e tendências emergentes desses dados. Além de mapear a posição das empresas no mercado global, nossa análise se estende à investigação dos setores que concentram as empresas mais valiosas e à mapear a distribuição geográfica dessas empresas.
 
     **Ferramentas:** Python
