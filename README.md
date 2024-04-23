@@ -1,16 +1,16 @@
 # Portfólio
 <div align="justify">
-  <p>
-    Com formação em Engenharia Civil, estive em cargos de liderança de equipes e operações, além de ter atuado no empreendedorismo e marketing digital.
-  </p>
-  <p>
-    Como analista de dados, tenho experiência em gerenciamento de bancos de dados, tratamento e limpeza, <i>queries</i> e análises exploratórias com Python e SQL. Também estou familiarizada com ferramentas para tratatamento e visualização de dados como Excel e Power BI.
-  </p>
-  <p>
-    Minha experiência anterior como líder de equipe e gestora fortaleceu minha habilidade de resolver problemas complexos e pensar analiticamente, capacidades cruciais na análise de dados. Além disso, minha habilidade comprovada de interagir efetivamente com fornecedores e clientes durante meus papéis anteriores tem sido inestimável na comunicação e colaboração em projetos de análise de dados.
-  </p>
+
+Atualmente, estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas, participo do Bootcamp de Análise de Dados da WomakersCode e sou voluntária na comunidade Mulheres em Dados nas frentes Clube do Livro e GenAI. Me formei em Ciência e Tecnologia pela UFVJM e em Engenharia Civil pela mesma instituição.
+
+Enquanto trabalhava como autônoma na indústria de semijoias, desenvolvi minhas habilidades de gestão, análise de mercado, vendas e marketing. Como engenheira civil na CINTEL Engenharia, tive a oportunidade de aplicar meus conhecimentos técnicos em projetos, orçamentos, cronogramas, liderança e logística.
+
+Sou uma profissional organizada, analítica, com forte raciocínio lógico. Acredito que minhas habilidades interpessoais, como comunicação assertiva e proatividade, me permitem trabalhar de forma colaborativa e eficiente em equipe. Estou em busca de uma oportunidade de estágio ou posição júnior para demonstrar meu talento e minhas habilidades.
   
 ## Projetos
+
+### Bootcamp Data Analytics - WoMakersCode
+#### _[Projetos](https://github.com/nadinne94/bootcamp-dataanalytics)_
 
 ### Análise Exploratória
 
@@ -41,8 +41,6 @@
   - Análise dos dados de um restaurante fictício
     
     **Ferramentas:** SQL(SQLServer)
-
-    
 
 ### Dashboard - Power BI
 
