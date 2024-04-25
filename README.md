@@ -6,11 +6,14 @@ Atualmente, estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas,
 Enquanto trabalhava como autônoma na indústria de semijoias, desenvolvi minhas habilidades de gestão, análise de mercado, vendas e marketing. Como engenheira civil na CINTEL Engenharia, tive a oportunidade de aplicar meus conhecimentos técnicos em projetos, orçamentos, cronogramas, liderança e logística.
 
 Sou uma profissional organizada, analítica, com forte raciocínio lógico. Acredito que minhas habilidades interpessoais, como comunicação assertiva e proatividade, me permitem trabalhar de forma colaborativa e eficiente em equipe. Estou em busca de uma oportunidade de estágio ou posição júnior para demonstrar meu talento e minhas habilidades.
-  
-## Projetos
 
-### Bootcamp Data Analytics - WoMakersCode
-#### _[Projetos](https://github.com/nadinne94/bootcamp-dataanalytics)_
+## Bootcamps
+
+[Data Analytics - WoMakersCode](https://github.com/nadinne94/bootcamp-dataanalytics)
+
+[AWS - DIO](https://github.com/nadinne94/aws-dio)
+
+## Projetos
 
 ### Análise Exploratória
 
