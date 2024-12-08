@@ -1,17 +1,19 @@
 # Portfólio
 <div align="justify">
 
-Atualmente, estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas, participo do Bootcamp de Análise de Dados da WomakersCode e sou voluntária na comunidade Mulheres em Dados nas frentes Clube do Livro e GenAI. Me formei em Ciência e Tecnologia pela UFVJM e em Engenharia Civil pela mesma instituição.
+Atualmente, atuo como Assistente de Operações Financeiras, gerenciando contas a receber, conciliações bancárias e relatórios financeiros. Estou cursando Tecnologia em Análise e Desenvolvimento de Sistemas e conclui o Bootcamp de Análise de Dados da WomakersCode, onde desenvolvi habilidades práticas em python, SQL e visualização de dados.
 
-Enquanto trabalhava como autônoma na indústria de semijoias, desenvolvi minhas habilidades de gestão, análise de mercado, vendas e marketing. Como engenheira civil na CINTEL Engenharia, tive a oportunidade de aplicar meus conhecimentos técnicos em projetos, orçamentos, cronogramas, liderança e logística.
+Sou voluntária na comunidade Mulheres em Dados, contribuindo para o Clube do Livro e iniciativas de inclusão na tecnologia. Também sou graduada em Ciência e Tecnologia e Engenharia Civil pela UFVJM.
 
-Sou uma profissional organizada, analítica, com forte raciocínio lógico. Acredito que minhas habilidades interpessoais, como comunicação assertiva e proatividade, me permitem trabalhar de forma colaborativa e eficiente em equipe. Estou em busca de uma oportunidade de estágio ou posição júnior para demonstrar meu talento e minhas habilidades.
+Como empreendedora na indústria de semijoias, desenvolvi competências em gestão, marketing e análise de mercado, que somam à minha visão analítica e organizacional. Já durante a minha experiência como engenheira civil, liderei projetos e fui resposável pela elaboração de orçamentos e cronogramas.
+
+Sou uma profissional analítica, com forte raciocínio lógico e habilidades interpessoais, como comunicação assertiva e proatividade. Meu objetivo é atuar em uma posição júnior ou de estágio na área de análise de dados para aplicar minhas competências e crescer profissionalmente no setor de tecnologia.
 
 ## Bootcamps
 
-[Data Analytics - WoMakersCode](https://github.com/nadinne94/bootcamp-dataanalytics)
+Os projetos realizados durante o bootcamp podem ser acessados no repositório abaixo:
 
-[AWS - DIO](https://github.com/nadinne94/aws-dio)
+[Data Analytics - WoMakersCode](https://github.com/nadinne94/bootcamp-dataanalytics)
 
 ## Projetos
 
