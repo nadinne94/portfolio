@@ -25,8 +25,28 @@
       animation: fadeUp 1s ease forwards;
     }
 
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #9ca3af;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
     h1 {
       font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
     }
 
     p {
@@ -98,11 +118,19 @@
 <body>
 
 <header>
-  <h1>Nadinne Cavalcante</h1>
-  <p>Engenheira de Dados com experiência na construção de pipelines de dados end-to-end utilizando PySpark, SQL e arquitetura Lakehouse.</p>
+  <div class="hero">
+    <h1>Nadinne Cavalcante</h1>
+      <p>Engenheira de Dados com experiência na construção de pipelines de dados end-to-end utilizando PySpark, SQL e arquitetura Lakehouse.</p>
+
+    <div class="links">
+      <a href="https://github.com/nadinne94" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
 </header>
 
 <section class="projects">
+  <h2>Projetos</h2>
 
   <div class="card">
     <h3>AdventureWorks Data Pipeline</h3>
