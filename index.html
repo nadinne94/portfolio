@@ -19,11 +19,25 @@
       max-width: 1100px;
       margin: auto;
       padding: 100px 20px 60px;
+    
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    
       opacity: 0;
       transform: translateY(40px);
       animation: fadeUp 1s ease forwards;
     }
 
+    .right-box {
+      background: #111;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 25px;
+      max-width: 320px;
+    }
+    
     .hero h1 {
       font-size: 3rem;
     }
@@ -117,14 +131,15 @@
         transform: translateY(0);
       }
     }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     
-    .highlight {
-      background: #111;
-      border: 1px solid #1f2937;
-      border-radius: 14px;
-      padding: 25px;
-      max-width: 350px;
-      aling: right;
+      .right-box {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -144,7 +159,7 @@
       <a href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank">LinkedIn</a>
     </div>
 
-    <div class="highlight">
+    <div class="right-box">
       <h3>+3 anos</h3>
       <p>Experiência em Engenharia de Dados</p>
     
