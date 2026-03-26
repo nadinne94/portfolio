@@ -13,7 +13,6 @@
       font-family: 'Inter', sans-serif;
       background: #0a0a0a;
       color: #e5e5e5;
-      overflow-x: hidden;
     }
 
     header {
@@ -27,13 +26,12 @@
 
     .hero h1 {
       font-size: 3rem;
-      font-weight: 600;
     }
 
     .hero p {
       margin-top: 15px;
       color: #9ca3af;
-      max-width: 500px;
+      max-width: 600px;
       line-height: 1.6;
     }
 
@@ -41,62 +39,29 @@
       margin-top: 20px;
     }
 
-   .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      background: #111;
-      border-radius: 12px;
-      padding: 20px;
-      transition: 0.3s;
-      border: 1px solid #1f2937;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-      border-color: #60a5fa;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      font-size: 0.9rem;
-      color: #9ca3af;
-      margin-bottom: 15px;
-    }
-
-    .tags span {
-      display: inline-block;
-      background: #1f2937;
-      padding: 5px 10px;
-      margin: 4px 4px 0 0;
-      border-radius: 6px;
-      font-size: 0.75rem;
-    }
-
-    .project a {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 0.9rem;
+    .links a {
+      margin-right: 15px;
       color: #60a5fa;
       text-decoration: none;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
     }
 
-    .skills span {
-      background: #111;
-      padding: 10px 15px;
-      border-radius: 8px;
-      border: 1px solid #1f2937;
+    h2 {
+      margin: 40px 0 20px;
+      font-size: 1.5rem;
+      border-left: 4px solid #60a5fa;
+      padding-left: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     .card {
@@ -124,10 +89,20 @@
       margin-top: 0;
     }
 
+    .card p {
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
     .lang {
       font-size: 0.8rem;
       margin-top: 10px;
       color: #60a5fa;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
     }
 
     footer {
@@ -150,7 +125,10 @@
 <header>
   <div class="hero">
     <h1>Nadinne Cavalcante</h1>
-      <p>Engenheira de Dados com experiência na construção de pipelines de dados end-to-end utilizando PySpark, SQL e arquitetura Lakehouse.</p>
+    <p>
+      Engenheira de Dados com experiência na construção de pipelines de dados end-to-end
+      utilizando PySpark, SQL e arquitetura Lakehouse.
+    </p>
 
     <div class="links">
       <a href="https://github.com/nadinne94" target="_blank">GitHub</a>
@@ -159,59 +137,72 @@
   </div>
 </header>
 
-<section class="projects">
-  <h2>Projetos - Construção de Pipeline</h2>
+<section>
 
-  <div class="card">
-    <h3>AdventureWorks Data Pipeline</h3>
-    <p>Construção de um pipeline de dados corporativo utilizando o dataset AdventureWorks.</p>
-    <div class="lang">Databricks • Apache Spark</div>
-    <br>
-    <a href="https://github.com/nadinne94/pipeline_adventureworks" target="_blank">Ver projeto →</a>
+  <h2>Construção de Pipeline</h2>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>AdventureWorks Data Pipeline</h3>
+      <p>Pipeline corporativo utilizando dataset AdventureWorks.</p>
+      <div class="lang">Databricks • Apache Spark</div>
+      <br>
+      <a href="https://github.com/nadinne94/pipeline_adventureworks" target="_blank">Ver projeto →</a>
+    </div>
+
+    <div class="card">
+      <h3>Azure End-to-End Data Engineering</h3>
+      <p>Pipeline na Azure com arquitetura Medallion.</p>
+      <div class="lang">Azure • Lakehouse</div>
+      <br>
+      <a href="https://github.com/nadinne94/azure-end-to-end-data-engineer-project" target="_blank">Ver projeto →</a>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h3>Azure End-to-End Data Engineering</h3>
-    <p>Implementação de um pipeline de dados na Azure aplicando a arquitetura Medallion.</p>
-    <div class="lang">Azure • Medallion Architecture</div>
-    <br>
-    <a href="https://github.com/nadinne94/azure-end-to-end-data-engineer-project" target="_blank">Ver projeto →</a>
+  <h2>Análise Exploratória</h2>
+  <div class="projects-grid">
+
+    <div class="card">
+      <h3>Desigualdade de Gênero em Dados</h3>
+      <p>Análise do mercado de dados no Brasil sob a ótica de gênero.</p>
+      <div class="lang">Python • Estatística</div>
+      <br>
+      <a href="https://github.com/nadinne94/desigualdade_genero" target="_blank">Ver projeto →</a>
+    </div>
+
+    <div class="card">
+      <h3>Análise de Vendas</h3>
+      <p>Exploração do comportamento de compra de clientes.</p>
+      <div class="lang">Python • SQL</div>
+      <br>
+      <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
+    </div>
+
+    <div class="card">
+      <h3>Força de Trabalho</h3>
+      <p>Análise de variáveis que impactam a distribuição de funcionários.</p>
+      <div class="lang">SQL • Estatística</div>
+      <br>
+      <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
+    </div>
+
   </div>
 
-  <h2>Projetos - Análise Exploratória</h2>
-  
-  <div class="card">
-    <h3>Reflexos da Desigualdade de Gênero no Mercado de Dados e Tecnologia</h3>
-    <p>Mapear o cenário do mercado de trabalho de dados no Brasil pela ótica da diversidade de gênero.</p>
-    <div class="lang">Python • Análise Estatísitca</div>
-    <br>
-    <a href="https://github.com/nadinne94/desigualdade_genero" target="_blank">Ver projeto →</a>
-  </div>
-  <div class="card">
-    <h3>Análise de Vendas</h3>
-    <p>Compreensão do comportamento de compra de clientes por meio de uma análise exploratória descritiva</p>
-    <div class="lang">Python • SQL</div>
-    <br>
-    <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
-  </div>
-  <div class="card">
-    <h3>Explorando a Força de Trabalho</h3>
-    <p>Investigação as variáveis que impactam a distribuição dos funcionários em uma empresa</p>
-    <div class="lang">SQL • Análise Estatísitca</div>
-    <br>
-    <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
-    <h2>Bootcamps -  Data Analytics - WoMakersCode</h2>
-    <p>Programa de formação para mulheres na área de análise de dados, com duração de 6,5 meses, com mentoria de carreira e conexões com mercado de trabalho.
+  <h2>Bootcamp - WoMakersCode</h2>
+  <div class="projects-grid">
 
-Conteúdo:
+    <div class="card">
+      <h3>Data Analytics Bootcamp</h3>
+      <p>
+        Formação completa em análise de dados com foco em Python, estatística,
+        BI, cloud e desenvolvimento profissional.
+      </p>
+      <div class="lang">Python • BI • SQL • Cloud</div>
+      <br>
+      <a href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank">Ver projeto →</a>
+    </div>
 
-Python aplicado a dados, estatística e modelos regressivos
-Visualização de dados, Business Intelligence e Storytelling de Dados
-Git, GitHub, Banco de Dados, Computação em Nuvem
-Soft skills, plano de carreira, empregabilidade e processos seletivos</p>
-    <div class="lang">Análise de Dados • </div>
-    <br>
-    <a href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank">Ver projeto →</a>
   </div>
 
 </section>
@@ -221,13 +212,12 @@ Soft skills, plano de carreira, empregabilidade e processos seletivos</p>
 </footer>
 
 <script>
-  // animação em cascata
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card, index) => {
     setTimeout(() => {
       card.classList.add("show");
-    }, index * 150);
+    }, index * 120);
   });
 </script>
 
