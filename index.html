@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -198,6 +199,183 @@
   <footer>
     © 2026 — Nadinne Cavalcante
   </footer>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadinne Cavalcante | Data Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      overflow-x: hidden;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px 60px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      color: #9ca3af;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 20px;
+      transition: all 0.35s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #60a5fa;
+      box-shadow: 0 10px 30px rgba(96,165,250,0.2);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .lang {
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #60a5fa;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+    }
+
+    /* Skeleton loading */
+    .skeleton {
+      height: 140px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #111 25%, #1f2937 50%, #111 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Nadinne Cavalcante</h1>
+  <p>Analista de Dados focada em transformar dados em decisões com Machine Learning e IA.</p>
+</header>
+
+<section class="projects" id="projects">
+  <!-- skeleton loading -->
+</section>
+
+<footer>
+  © 2026 — Nadinne Cavalcante
+</footer>
+
+<script>
+  const username = "nadinne94";
+  const container = document.getElementById("projects");
+
+  // skeleton inicial
+  for (let i = 0; i < 6; i++) {
+    const sk = document.createElement("div");
+    sk.classList.add("skeleton");
+    container.appendChild(sk);
+  }
+
+  fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
+    .then(res => res.json())
+    .then(data => {
+
+      container.innerHTML = "";
+
+      data.forEach((repo, index) => {
+
+        if (repo.fork) return;
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "Sem descrição disponível"}</p>
+          <div class="lang">${repo.language || "N/A"}</div>
+          <br>
+          <a href="${repo.html_url}" target="_blank">Ver projeto →</a>
+        `;
+
+        container.appendChild(card);
+
+        // animação em cascata
+        setTimeout(() => {
+          card.classList.add("show");
+        }, index * 120);
+      });
+
+    })
+    .catch(() => {
+      container.innerHTML = "<p>Erro ao carregar projetos</p>";
+    });
+</script>
 
 </body>
 </html>
