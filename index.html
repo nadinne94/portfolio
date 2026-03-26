@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nadinne Cavalcante | Data Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+
+    header {
+      padding: 80px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      color: #9ca3af;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .links a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #60a5fa;
+      font-weight: 500;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      border-left: 4px solid #60a5fa;
+      padding-left: 10px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s;
+      border: 1px solid #1f2937;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: #60a5fa;
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 15px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #1f2937;
+      padding: 5px 10px;
+      margin: 4px 4px 0 0;
+      border-radius: 6px;
+      font-size: 0.75rem;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #111;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #1f2937;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Nadinne Cavalcante</h1>
+      <p>
+        Analista de Dados focada em transformar dados em decisões.
+        Experiência com Python, Machine Learning e IA aplicada a problemas reais.
+      </p>
+
+      <div class="links">
+        <a href="https://github.com/nadinne94" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Projetos</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>Previsão de Preços de Imóveis</h3>
+        <p>Modelo preditivo utilizando regressão para estimar valores imobiliários.</p>
+        <div class="tags">
+          <span>Python</span><span>ML</span><span>Pandas</span>
+        </div>
+        <a href="https://github.com/nadinne94/portfolio_dados" target="_blank">Ver no GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Classificação de Notícias (NLP)</h3>
+        <p>Pipeline de NLP para classificar textos automaticamente.</p>
+        <div class="tags">
+          <span>NLP</span><span>Scikit-learn</span>
+        </div>
+        <a href="https://github.com/nadinne94/portfolio_dados" target="_blank">Ver no GitHub →</a>
+      </div>
+
+      <div class="project">
+        <h3>Projetos com IA Generativa</h3>
+        <p>Exploração de automação e agentes inteligentes com IA.</p>
+        <div class="tags">
+          <span>LLM</span><span>AI</span>
+        </div>
+        <a href="https://github.com/nadinne94/portfolio_dados" target="_blank">Ver no GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+
+    <div class="skills">
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Machine Learning</span>
+      <span>Pandas</span>
+      <span>Streamlit</span>
+      <span>Git</span>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 — Nadinne Cavalcante
+  </footer>
+
+</body>
+</html>
