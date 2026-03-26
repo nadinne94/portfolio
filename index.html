@@ -41,27 +41,62 @@
       margin-top: 20px;
     }
 
-    h1 {
-      font-size: 3rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
-      color: #9ca3af;
-      max-width: 500px;
-      line-height: 1.6;
-    }
-
-    .projects {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
+   .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      background: #111;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s;
+      border: 1px solid #1f2937;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      border-color: #60a5fa;
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 15px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #1f2937;
+      padding: 5px 10px;
+      margin: 4px 4px 0 0;
+      border-radius: 6px;
+      font-size: 0.75rem;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #111;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #1f2937;
     }
 
     .card {
@@ -95,11 +130,6 @@
       color: #60a5fa;
     }
 
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
     footer {
       text-align: center;
       padding: 40px;
@@ -130,7 +160,7 @@
 </header>
 
 <section class="projects">
-  <h2>Projetos</h2>
+  <h2>Projetos - Construção de Pipeline</h2>
 
   <div class="card">
     <h3>AdventureWorks Data Pipeline</h3>
@@ -148,12 +178,40 @@
     <a href="https://github.com/nadinne94/azure-end-to-end-data-engineer-project" target="_blank">Ver projeto →</a>
   </div>
 
+  <h2>Projetos - Análise Exploratória</h2>
+  
   <div class="card">
-    <h3>Projetos com IA Generativa</h3>
-    <p>Exploração de automação e agentes inteligentes utilizando modelos de linguagem.</p>
-    <div class="lang">LLM • AI</div>
+    <h3>Reflexos da Desigualdade de Gênero no Mercado de Dados e Tecnologia</h3>
+    <p>Mapear o cenário do mercado de trabalho de dados no Brasil pela ótica da diversidade de gênero.</p>
+    <div class="lang">Python • Análise Estatísitca</div>
     <br>
-    <a href="https://github.com/nadinne94/portfolio_dados" target="_blank">Ver projeto →</a>
+    <a href="https://github.com/nadinne94/desigualdade_genero" target="_blank">Ver projeto →</a>
+  </div>
+  <div class="card">
+    <h3>Análise de Vendas</h3>
+    <p>Compreensão do comportamento de compra de clientes por meio de uma análise exploratória descritiva</p>
+    <div class="lang">Python • SQL</div>
+    <br>
+    <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
+  </div>
+  <div class="card">
+    <h3>Explorando a Força de Trabalho</h3>
+    <p>Investigação as variáveis que impactam a distribuição dos funcionários em uma empresa</p>
+    <div class="lang">SQL • Análise Estatísitca</div>
+    <br>
+    <a href="https://github.com/nadinne94/analise_vendas" target="_blank">Ver projeto →</a>
+    <h2>Bootcamps -  Data Analytics - WoMakersCode</h2>
+    <p>Programa de formação para mulheres na área de análise de dados, com duração de 6,5 meses, com mentoria de carreira e conexões com mercado de trabalho.
+
+Conteúdo:
+
+Python aplicado a dados, estatística e modelos regressivos
+Visualização de dados, Business Intelligence e Storytelling de Dados
+Git, GitHub, Banco de Dados, Computação em Nuvem
+Soft skills, plano de carreira, empregabilidade e processos seletivos</p>
+    <div class="lang">Análise de Dados • </div>
+    <br>
+    <a href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank">Ver projeto →</a>
   </div>
 
 </section>
