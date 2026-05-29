@@ -80,6 +80,29 @@ function initRevealAnimations() {
   document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
 }
 
+function showProjectCategory(category) {
+  document.querySelectorAll('.project-panel').forEach(panel => {
+    panel.classList.remove('active');
+  });
+
+  document.querySelectorAll('.project-filter-btn').forEach(button => {
+    button.classList.remove('active');
+  });
+
+  document.getElementById(`project-${category}`)?.classList.add('active');
+
+  const buttonLabels = {
+    engenharia: 'Engenharia de Dados',
+    analytics: 'Analytics & BI',
+    bootcamp: 'Data Analytics Bootcamp'
+  };
+
+  document.querySelectorAll('.project-filter-btn').forEach(button => {
+    if (button.textContent.trim() === buttonLabels[category]) {
+      button.classList.add('active');
+    }
+  });
+}
 window.addEventListener('scroll', () => {
   document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
 });
