@@ -1,0 +1,150 @@
+<section class="section">
+  <div class="project-hero" data-reveal>
+    <span class="badge">Projeto principal de portfólio</span>
+    <h2>Pipeline Lakehouse de Dados Abertos da Câmara dos Deputados</h2>
+    <p>
+      Plataforma end-to-end de Engenharia de Dados para transformar dados públicos legislativos em produto analítico para Power BI, cobrindo ingestão via API, Delta Lake, arquitetura Medalhão, PySpark, NLP/ML, Star Schema, camada de serving e dashboard.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary" href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">Ver documentação completa no GitHub</a>
+      <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9" target="_blank" rel="noreferrer">Abrir dashboard</a>
+    </div>
+  </div>
+
+  <div class="section-header" data-reveal>
+    <div class="gradient-line"></div>
+    <h2>Resumo da documentação</h2>
+  </div>
+
+  <div class="readme-grid" data-reveal>
+    <div class="readme-step">
+      <span>01</span>
+      <h3>Problema de negócio</h3>
+      <p>Os dados legislativos são públicos e ricos, mas estão distribuídos em múltiplos endpoints, com estruturas diferentes e necessidade de tratamento antes da análise.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>02</span>
+      <h3>Fonte de dados</h3>
+      <p>Consumo da API pública de Dados Abertos da Câmara, incluindo deputados, partidos, órgãos, proposições, tramitações, votações, votos, eventos e presenças.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>03</span>
+      <h3>Ingestão Bronze</h3>
+      <p>Armazena os dados brutos da API com suporte a paginação, ingestão incremental, endpoints dependentes, watermark, metadados técnicos e logs.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>04</span>
+      <h3>Camada Silver</h3>
+      <p>Realiza limpeza e padronização: nomes de colunas, tipos de dados, datas, nulos, textos e duplicidades, criando uma base mais confiável.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>05</span>
+      <h3>Camada Gold</h3>
+      <p>Adiciona valor analítico com atributos derivados, flags, regras de negócio, classificação de proposições e preparação para modelagem dimensional.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>06</span>
+      <h3>NLP e Machine Learning</h3>
+      <p>Classificação temática e jurídica com estratégia híbrida usando regex, dicionários, modelo supervisionado, fallback e rastreamento com MLflow.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>07</span>
+      <h3>Modelo dimensional</h3>
+      <p>Criação de Star Schema com dimensões como tempo, deputado, partido, proposição, evento e órgão, além de fatos para proposições, autoria, tramitação, votação, votos, eventos e presença.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>08</span>
+      <h3>Serving e Power BI</h3>
+      <p>Publicação das tabelas finais para consultas SQL, exploração analítica e construção do dashboard legislativo no Power BI.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>09</span>
+      <h3>Data Quality</h3>
+      <p>Validações declarativas por tabela e camada, incluindo dataset não vazio, colunas obrigatórias, chaves não nulas, unicidade e controle de nulos.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>10</span>
+      <h3>Execução</h3>
+      <p>Execução em ordem conceitual: Bronze, Silver, treinamento ML, Gold, Star Schema e Serving, respeitando as dependências entre as camadas.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>11</span>
+      <h3>Decisões técnicas</h3>
+      <p>Medallion separa responsabilidades, Delta Lake aumenta confiabilidade, PySpark permite escala, Star Schema facilita BI e regex + ML melhora a classificação textual.</p>
+    </div>
+
+    <div class="readme-step">
+      <span>12</span>
+      <h3>Evoluções futuras</h3>
+      <p>Próximas melhorias: CI/CD, aprimoramento da avaliação dos modelos NLP e amadurecimento do pipeline para cenários mais próximos de produção.</p>
+    </div>
+  </div>
+
+  <div class="hero-actions" data-reveal style="margin:1rem 0 2rem">
+    <a class="btn primary" href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">Ler README completo no GitHub</a>
+  </div>
+
+  <div class="section-header" data-reveal>
+    <div class="gradient-line"></div>
+    <h2>Métricas do projeto</h2>
+  </div>
+
+  <div class="metrics" data-reveal>
+    <div class="metric">
+      <strong>9+</strong>
+      <span>datasets ingeridos</span>
+    </div>
+    <div class="metric">
+      <strong>4</strong>
+      <span>camadas analíticas</span>
+    </div>
+    <div class="metric">
+      <strong>2+</strong>
+      <span>modelos/classificadores ML/NLP</span>
+    </div>
+    <div class="metric">
+      <strong>Power BI</strong>
+      <span>dashboard público</span>
+    </div>
+  </div>
+
+  <div class="section-header" data-reveal>
+    <div class="gradient-line"></div>
+    <h2>Arquitetura visual do pipeline</h2>
+  </div>
+
+  <div class="arch" data-reveal>
+    <div class="arch-node">API Câmara</div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node">Bronze<br>Raw</div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node">Silver<br>Clean</div>
+    <div class="arch-arrow">→</div>
+    <div class="arch-node">Gold + ML/NLP</div>
+    <div class="arch-node">Star Schema<br>Serving + Power BI</div>
+  </div>
+
+  <div class="section-header" data-reveal>
+    <div class="gradient-line"></div>
+    <h2>Dashboard Power BI</h2>
+  </div>
+
+  <div class="dashboard-frame" data-reveal>
+    <iframe
+      title="dashboad_legislativo"
+      src="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9"
+      frameborder="0"
+      allowFullScreen="true">
+    </iframe>
+  </div>
+</section>
