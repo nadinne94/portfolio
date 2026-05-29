@@ -13,85 +13,83 @@
 
   <div class="section-header" data-reveal>
     <div class="gradient-line"></div>
-    <h2>Resumo da documentação</h2>
+    <h2>Resumo do projeto</h2>
   </div>
 
-  <div class="readme-grid" data-reveal>
-    <div class="readme-step">
-      <span>01</span>
-      <h3>Problema de negócio</h3>
-      <p>Os dados legislativos são públicos e ricos, mas estão distribuídos em múltiplos endpoints, com estruturas diferentes e necessidade de tratamento antes da análise.</p>
+  <div class="project-summary" data-reveal>
+    <div class="summary-block">
+      <span>Visão geral</span>
+      <p>
+        O projeto foi desenvolvido para simular um fluxo moderno de Engenharia de Dados aplicado ao domínio legislativo brasileiro. Ele transforma dados brutos da API pública da Câmara dos Deputados em uma base analítica organizada, confiável e pronta para exploração em Power BI.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>02</span>
-      <h3>Fonte de dados</h3>
-      <p>Consumo da API pública de Dados Abertos da Câmara, incluindo deputados, partidos, órgãos, proposições, tramitações, votações, votos, eventos e presenças.</p>
+    <div class="summary-block">
+      <span>Problema resolvido</span>
+      <p>
+        Os dados legislativos são públicos e ricos, mas estão distribuídos em múltiplos endpoints, com estruturas diferentes e relações hierárquicas. O pipeline organiza essas informações para responder perguntas sobre proposições, deputados, partidos, tramitações, votações, eventos e presença parlamentar.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>03</span>
-      <h3>Ingestão Bronze</h3>
-      <p>Armazena os dados brutos da API com suporte a paginação, ingestão incremental, endpoints dependentes, watermark, metadados técnicos e logs.</p>
+    <div class="summary-block">
+      <span>Fonte de dados</span>
+      <p>
+        A fonte principal é a API de Dados Abertos da Câmara dos Deputados. O projeto consome entidades como deputados, partidos, órgãos legislativos, proposições, autores, tramitações, votações, votos, eventos e presença em eventos.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>04</span>
-      <h3>Camada Silver</h3>
-      <p>Realiza limpeza e padronização: nomes de colunas, tipos de dados, datas, nulos, textos e duplicidades, criando uma base mais confiável.</p>
+    <div class="summary-block">
+      <span>Arquitetura da solução</span>
+      <p>
+        A solução segue uma arquitetura Lakehouse em camadas, com Bronze para ingestão bruta, Silver para limpeza e padronização, Gold para enriquecimento analítico, Star Schema para modelagem dimensional e Serving para disponibilização das tabelas ao Power BI.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>05</span>
-      <h3>Camada Gold</h3>
-      <p>Adiciona valor analítico com atributos derivados, flags, regras de negócio, classificação de proposições e preparação para modelagem dimensional.</p>
+    <div class="summary-block">
+      <span>Ingestão e Delta Lake</span>
+      <p>
+        A camada Bronze lida com ingestão simples, incremental e dependente, incluindo paginação, controle de watermark, metadados técnicos e logs. Os dados são persistidos em Delta Lake, permitindo maior confiabilidade, histórico transacional e compatibilidade com processamento Spark.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>06</span>
-      <h3>NLP e Machine Learning</h3>
-      <p>Classificação temática e jurídica com estratégia híbrida usando regex, dicionários, modelo supervisionado, fallback e rastreamento com MLflow.</p>
+    <div class="summary-block">
+      <span>Tratamento e enriquecimento</span>
+      <p>
+        A camada Silver realiza padronização de colunas, tipos, datas, textos, nulos e duplicidades. A camada Gold adiciona valor analítico com atributos derivados, flags, regras de negócio, categorização de votos e preparação para modelagem dimensional.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>07</span>
-      <h3>Modelo dimensional</h3>
-      <p>Criação de Star Schema com dimensões como tempo, deputado, partido, proposição, evento e órgão, além de fatos para proposições, autoria, tramitação, votação, votos, eventos e presença.</p>
+    <div class="summary-block">
+      <span>NLP e Machine Learning</span>
+      <p>
+        Um dos diferenciais do projeto é a classificação temática e jurídica de proposições. A solução combina regex, dicionários temáticos, modelo supervisionado, fallback para textos ambíguos e MLflow para rastreamento, versionamento e inferência dos modelos.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>08</span>
-      <h3>Serving e Power BI</h3>
-      <p>Publicação das tabelas finais para consultas SQL, exploração analítica e construção do dashboard legislativo no Power BI.</p>
+    <div class="summary-block">
+      <span>Modelo dimensional</span>
+      <p>
+        O projeto cria um Star Schema com dimensões como tempo, deputado, partido, proposição, evento e órgão. Também cria fatos para proposições, autoria, tramitação, votação, votos, eventos e presença, facilitando análises em ferramentas de BI.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>09</span>
-      <h3>Data Quality</h3>
-      <p>Validações declarativas por tabela e camada, incluindo dataset não vazio, colunas obrigatórias, chaves não nulas, unicidade e controle de nulos.</p>
+    <div class="summary-block">
+      <span>Data Quality e observabilidade</span>
+      <p>
+        O pipeline inclui validações declarativas por tabela e camada, como dataset não vazio, colunas obrigatórias, chaves não nulas, unicidade e limite de nulos. Logs estruturados registram camada, dataset, status, registros processados e timestamp, apoiando rastreabilidade e auditoria.
+      </p>
     </div>
 
-    <div class="readme-step">
-      <span>10</span>
-      <h3>Execução</h3>
-      <p>Execução em ordem conceitual: Bronze, Silver, treinamento ML, Gold, Star Schema e Serving, respeitando as dependências entre as camadas.</p>
-    </div>
-
-    <div class="readme-step">
-      <span>11</span>
-      <h3>Decisões técnicas</h3>
-      <p>Medallion separa responsabilidades, Delta Lake aumenta confiabilidade, PySpark permite escala, Star Schema facilita BI e regex + ML melhora a classificação textual.</p>
-    </div>
-
-    <div class="readme-step">
-      <span>12</span>
-      <h3>Evoluções futuras</h3>
-      <p>Próximas melhorias: CI/CD, aprimoramento da avaliação dos modelos NLP e amadurecimento do pipeline para cenários mais próximos de produção.</p>
+    <div class="summary-block">
+      <span>Resultado final</span>
+      <p>
+        As tabelas finais são publicadas para consumo analítico em Power BI, permitindo explorar temas legislativos, autores, partidos, votações, tramitações e eventos. O dashboard público demonstra a aplicação prática do pipeline como produto de dados.
+      </p>
     </div>
   </div>
 
   <div class="hero-actions" data-reveal style="margin:1rem 0 2rem">
-    <a class="btn primary" href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">Ler README completo no GitHub</a>
+    <a class="btn primary" href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">Ler documentação completa no GitHub</a>
   </div>
 
   <div class="section-header" data-reveal>
