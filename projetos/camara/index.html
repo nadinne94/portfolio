@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pipeline Lakehouse Câmara — Nadinne Cavalcante</title>
+  <meta name="description" content="Página do projeto Pipeline Lakehouse de Dados Abertos da Câmara dos Deputados, com arquitetura Medalhão, PySpark, Delta Lake, Star Schema, ML/NLP e Power BI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../../index.html">NC</a>
+      <div class="nav-social">
+        <a href="../../index.html">Portfólio</a>
+        <a href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9" target="_blank" rel="noreferrer">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" data-reveal>
+    <span class="badge">Projeto de Engenharia de Dados</span>
+    <h1>Pipeline Lakehouse<br><span class="gradient-text">Dados Abertos da Câmara</span></h1>
+    <p class="hero-sub">
+      Plataforma end-to-end para transformar dados legislativos públicos em produto analítico, usando API REST, PySpark, Delta Lake, arquitetura Medalhão, NLP/ML, Star Schema e Power BI.
+    </p>
+    <div class="hero-actions hero-nav">
+      <a class="btn primary" href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">Documentação completa no GitHub</a>
+      <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9" target="_blank" rel="noreferrer">Abrir dashboard Power BI</a>
+      <a class="btn" href="../../index.html">Voltar ao portfólio</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Visão geral</h2>
+      </div>
+
+      <div class="project-summary" data-reveal>
+        <div class="summary-block">
+          <span>Objetivo</span>
+          <p>
+            Organizar dados públicos da Câmara dos Deputados em uma arquitetura analítica moderna, permitindo análises sobre proposições, deputados, partidos, tramitações, votações, eventos e presença parlamentar.
+          </p>
+        </div>
+
+        <div class="summary-block">
+          <span>Problema</span>
+          <p>
+            A API pública possui dados ricos, mas distribuídos em vários endpoints, com relações dependentes e estruturas diferentes. O projeto resolve isso por meio de ingestão, padronização, enriquecimento, modelagem dimensional e publicação para BI.
+          </p>
+        </div>
+
+        <div class="summary-block">
+          <span>Resultado</span>
+          <p>
+            O pipeline gera tabelas analíticas em Star Schema e disponibiliza os dados em uma camada de serving para consumo em Power BI, com dashboard público para exploração dos principais indicadores legislativos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Arquitetura do pipeline</h2>
+      </div>
+
+      <div class="arch" data-reveal>
+        <div class="arch-node">API Câmara</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Bronze<br>Raw</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Silver<br>Clean</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Gold + ML/NLP</div>
+        <div class="arch-node">Star Schema<br>Serving + Power BI</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Principais entregas</h2>
+      </div>
+
+      <div class="cards-grid" data-reveal>
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Ingestão via API</h3>
+          <p>Consumo de endpoints simples, incrementais e dependentes, com paginação, watermark, metadados técnicos e logs.</p>
+          <div class="card-tags"><span class="card-tag">API REST</span><span class="card-tag">Bronze</span><span class="card-tag">Logs</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Lakehouse em camadas</h3>
+          <p>Separação entre Bronze, Silver e Gold para organizar responsabilidades, qualidade e enriquecimento dos dados.</p>
+          <div class="card-tags"><span class="card-tag">Delta Lake</span><span class="card-tag">PySpark</span><span class="card-tag">Medallion</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>NLP e Machine Learning</h3>
+          <p>Classificação temática e jurídica de proposições usando regex, dicionários, modelo supervisionado, fallback e MLflow.</p>
+          <div class="card-tags"><span class="card-tag">NLP</span><span class="card-tag">MLflow</span><span class="card-tag">scikit-learn</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Modelo dimensional</h3>
+          <p>Criação de dimensões e fatos para facilitar análises legislativas e consumo em ferramentas de BI.</p>
+          <div class="card-tags"><span class="card-tag">Star Schema</span><span class="card-tag">Fact Tables</span><span class="card-tag">Dimension Tables</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Data Quality</h3>
+          <p>Validações declarativas por camada e dataset, incluindo colunas obrigatórias, chaves não nulas, unicidade e controle de nulos.</p>
+          <div class="card-tags"><span class="card-tag">Data Quality</span><span class="card-tag">Validações</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-line"></div>
+          <h3>Dashboard Power BI</h3>
+          <p>Publicação de tabelas finais para exploração analítica em dashboard legislativo interativo.</p>
+          <div class="card-tags"><span class="card-tag">Power BI</span><span class="card-tag">Power Query</span><span class="card-tag">DAX</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Dashboard Power BI</h2>
+      </div>
+
+      <div class="dashboard-frame" data-reveal>
+        <iframe
+          title="dashboad_legislativo"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9"
+          frameborder="0"
+          allowFullScreen="true">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="../../index.html">Voltar ao portfólio</a>
+      <a href="https://github.com/nadinne94/projeto_api_dados_abertos_camara" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://app.powerbi.com/view?r=eyJrIjoiZGIxYTA5MTMtZjIxNy00ZTlkLWJlMjEtMWZmODA1NTlhZWRmIiwidCI6Ijk2NDEzODNiLWQ0N2MtNDQyMy05OTA4LTU5MGYyYTRmNzgwZCJ9" target="_blank" rel="noreferrer">Dashboard</a>
+    </div>
+    <p>© 2026 — Nadinne Cavalcante Silva</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
