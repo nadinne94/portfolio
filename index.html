@@ -12,16 +12,8 @@
 
 <body>
   <nav class="navbar" id="navbar">
-    <div class="nav-inner nav-inner-balanced">
+    <div class="nav-inner">
       <a class="nav-logo" href="#" onclick="switchTab('sobre')">NC</a>
-
-      <div class="nav-center">
-        <button class="tab-btn nav-pill active" onclick="switchTab('sobre')">Sobre</button>
-        <button class="tab-btn nav-pill" onclick="switchTab('projetos')">Projetos</button>
-        <button class="tab-btn nav-pill" onclick="switchTab('skills')">Skills</button>
-        <button class="tab-btn nav-pill" onclick="switchTab('timeline')">Timeline</button>
-        <button class="tab-btn nav-pill" onclick="switchTab('curriculo')">Currículo</button>
-      </div>
 
       <div class="nav-social">
         <a href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -51,6 +43,14 @@
     <p class="hero-sub">
       Engenheira de Dados Júnior com foco em pipelines end-to-end, APIs, PySpark, Azure, Delta Lake, modelagem dimensional e Power BI.
     </p>
+
+    <div class="hero-actions hero-nav">
+      <button class="tab-btn nav-pill active" onclick="switchTab('sobre')">Sobre</button>
+      <button class="tab-btn nav-pill" onclick="switchTab('projetos')">Projetos</button>
+      <button class="tab-btn nav-pill" onclick="switchTab('skills')">Skills</button>
+      <button class="tab-btn nav-pill" onclick="switchTab('timeline')">Timeline</button>
+      <button class="tab-btn nav-pill" onclick="switchTab('curriculo')">Currículo</button>
+    </div>
   </header>
 
   <main class="container">
