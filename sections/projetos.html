@@ -4,16 +4,30 @@
     <h2>Projetos</h2>
   </div>
 
-  <div class="project-category" data-reveal>
-    <h3>Engenharia de Dados</h3>
+  <div class="project-filter" data-reveal>
+    <button class="project-filter-btn active" onclick="showProjectCategory('engenharia')">
+      Engenharia de Dados
+    </button>
+    <button class="project-filter-btn" onclick="showProjectCategory('analytics')">
+      Analytics & BI
+    </button>
+    <button class="project-filter-btn" onclick="showProjectCategory('bootcamp')">
+      Data Analytics Bootcamp
+    </button>
+  </div>
 
+  <div class="project-panel active" id="project-engenharia" data-reveal>
     <div class="cards-grid">
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Pipeline Lakehouse de Dados Abertos da Câmara</h3>
-        <p>
-          Plataforma de Engenharia de Dados para dados legislativos, com ingestão via API, Delta Lake, PySpark, arquitetura Medalhão, NLP/ML, Star Schema, Serving e Power BI.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Pipeline Lakehouse de Dados Abertos da Câmara</h3>
+          <p>
+            Plataforma de Engenharia de Dados para dados legislativos, com ingestão via API, Delta Lake, PySpark, arquitetura Medalhão, NLP/ML, Star Schema, Serving e Power BI.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">PySpark</span>
           <span class="card-tag">Delta Lake</span>
@@ -21,109 +35,136 @@
           <span class="card-tag">Star Schema</span>
           <span class="card-tag">Power BI</span>
         </div>
-        <a class="card-link" href="projetos/camara/">Ver versão HTML →</a>
+
+        <a class="card-link" href="projetos/camara/">Ver projeto →</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Pipeline AdventureWorks</h3>
-        <p>
-          Pipeline Lakehouse com camadas Bronze, Silver e Gold, processamento com PySpark e modelagem dimensional na camada analítica.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Pipeline AdventureWorks</h3>
+          <p>
+            Pipeline Lakehouse com camadas Bronze, Silver e Gold, processamento com PySpark e modelagem dimensional na camada analítica.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Databricks</span>
           <span class="card-tag">PySpark</span>
           <span class="card-tag">Delta Lake</span>
           <span class="card-tag">Star Schema</span>
         </div>
+
         <a class="card-link" href="https://github.com/nadinne94/pipeline_adventureworks" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Azure End-to-End Data Engineering</h3>
-        <p>
-          Projeto de arquitetura de dados em Azure com ingestão, armazenamento, transformação e disponibilização de dados para consumo analítico.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Azure End-to-End Data Engineering</h3>
+          <p>
+            Projeto de arquitetura de dados em Azure com ingestão, armazenamento, transformação e disponibilização de dados para consumo analítico.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Azure</span>
           <span class="card-tag">Data Lake</span>
           <span class="card-tag">Synapse</span>
           <span class="card-tag">Data Engineering</span>
         </div>
+
         <a class="card-link" href="https://github.com/nadinne94/azure-end-to-end-data-engineer-project" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
     </div>
   </div>
 
-  <div class="project-category" data-reveal>
-    <h3>Analytics e BI</h3>
-
+  <div class="project-panel" id="project-analytics" data-reveal>
     <div class="cards-grid">
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Além de Flores e Chocolates, Uma Celebração dos Nossos Direitos e Lutas</h3>
-        <p>
-          Projeto analítico sobre desigualdade de gênero, com exploração de dados, visualização e comunicação orientada a impacto social.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Além de Flores e Chocolates, Uma Celebração dos Nossos Direitos e Lutas</h3>
+          <p>
+            Projeto analítico sobre desigualdade de gênero, com exploração de dados, visualização e comunicação orientada a impacto social.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Analytics</span>
-          <span class="card-tag">Visualização de Dados</span>
+          <span class="card-tag">Visualização</span>
           <span class="card-tag">Storytelling</span>
           <span class="card-tag">Impacto Social</span>
         </div>
+
         <a class="card-link" href="https://github.com/nadinne94/desigualdade_genero" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Projeto de Análise das Empresas Listadas na Forbes</h3>
-        <p>
-          Análise exploratória sobre empresas listadas na Forbes, investigando setores, distribuição geográfica e padrões de valor de mercado.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Projeto de Análise das Empresas Listadas na Forbes</h3>
+          <p>
+            Análise exploratória sobre empresas listadas na Forbes, investigando setores, distribuição geográfica e padrões de valor de mercado.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Python</span>
           <span class="card-tag">Pandas</span>
           <span class="card-tag">EDA</span>
           <span class="card-tag">Analytics</span>
         </div>
+
         <a class="card-link" href="https://github.com/nadinne94/projeto_forbes_2023" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
 
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Análise de Vendas</h3>
-        <p>
-          Projeto de análise exploratória e consultas SQL para compreender comportamento de compra de clientes e apoiar decisões comerciais.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Análise de Vendas</h3>
+          <p>
+            Projeto de análise exploratória e consultas SQL para compreender comportamento de compra de clientes e apoiar decisões comerciais.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Python</span>
           <span class="card-tag">SQL</span>
           <span class="card-tag">PostgreSQL</span>
           <span class="card-tag">Análise de Dados</span>
         </div>
+
         <a class="card-link" href="https://github.com/nadinne94/analise_vendas" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
     </div>
   </div>
 
-  <div class="project-category" data-reveal>
-    <h3>Data Analytics — WoMakersCode</h3>
-
+  <div class="project-panel" id="project-bootcamp" data-reveal>
     <div class="cards-grid">
-      <div class="card">
+      <div class="card project-card">
         <div class="card-line"></div>
-        <h3>Bootcamp Data Analytics</h3>
-        <p>
-          Repositório com atividades, estudos e projetos desenvolvidos durante o Bootcamp Data Analytics da WoMakersCode.
-        </p>
+
+        <div class="project-card-body">
+          <h3>Bootcamp Data Analytics — WoMakersCode</h3>
+          <p>
+            Repositório com atividades, estudos e projetos desenvolvidos durante o Bootcamp Data Analytics da WoMakersCode.
+          </p>
+        </div>
+
         <div class="card-tags">
           <span class="card-tag">Data Analytics</span>
           <span class="card-tag">Python</span>
           <span class="card-tag">SQL</span>
           <span class="card-tag">Bootcamp</span>
         </div>
-        <a class="card-link" href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank" rel="noreferrer">Ver repositório →</a>
+
+        <a class="card-link" href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank" rel="noreferrer">Ver projeto →</a>
       </div>
     </div>
   </div>
