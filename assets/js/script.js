@@ -3,8 +3,7 @@ const sections = [
   { id: 'camara', file: 'sections/projeto-camara.html' },
   { id: 'skills', file: 'sections/skills.html' },
   { id: 'projetos', file: 'sections/projetos.html' },
-  { id: 'timeline', file: 'sections/timeline.html' },
-  { id: 'curriculo', file: 'sections/curriculo.html' }
+  { id: 'timeline', file: 'sections/timeline.html' }
 ];
 
 async function loadSection(id, file) {
@@ -48,8 +47,7 @@ function switchTab(id) {
     camara: 'Projeto Câmara',
     skills: 'Skills',
     projetos: 'Projetos',
-    timeline: 'Timeline',
-    curriculo: 'Currículo'
+    timeline: 'Timeline'
   };
 
   document.querySelectorAll('.tab-btn').forEach(button => {
@@ -103,6 +101,7 @@ function showProjectCategory(category) {
     }
   });
 }
+
 window.addEventListener('scroll', () => {
   document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
 });
