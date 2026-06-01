@@ -1,6 +1,5 @@
 const sections = [
   { id: 'sobre', file: 'sections/sobre.html' },
-  { id: 'camara', file: 'sections/projeto-camara.html' },
   { id: 'skills', file: 'sections/skills.html' },
   { id: 'projetos', file: 'sections/projetos.html' },
   { id: 'timeline', file: 'sections/timeline.html' }
@@ -17,7 +16,7 @@ async function loadSection(id, file) {
   } catch (error) {
     container.innerHTML = `
       <section class="section">
-        <div class="resume-card">
+        <div class="card">
           <h3>Erro ao carregar seção</h3>
           <p>Não foi possível carregar o conteúdo de ${file}.</p>
         </div>
@@ -44,7 +43,6 @@ function switchTab(id) {
 
   const labels = {
     sobre: 'Sobre',
-    camara: 'Projeto Câmara',
     skills: 'Skills',
     projetos: 'Projetos',
     timeline: 'Timeline'
