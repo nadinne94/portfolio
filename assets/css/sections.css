@@ -41,19 +41,9 @@
 }
 
 .skills-group h3 {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
   font-size: 1rem;
   margin-bottom: 0.35rem;
   color: hsl(var(--fg));
-}
-
-.skills-group h3::before {
-  content: "•";
-  color: hsl(var(--primary));
-  font-size: 1.15rem;
-  line-height: 1;
 }
 
 .skills-group p {
@@ -205,7 +195,7 @@
   transition: 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .timeline-card::before {
@@ -268,7 +258,7 @@
 }
 
 .timeline-period {
-  margin-top: 0.85rem;
+  margin-top: auto;
   padding-top: 0.65rem;
   border-top: 1px solid hsl(var(--border));
   color: hsl(var(--primary)) !important;
@@ -326,6 +316,10 @@
   .timeline-entry.right .timeline-card::before {
     left: 0;
     right: auto;
+  }
+
+  .timeline-period {
+    margin-top: 0.85rem;
   }
 }
 
