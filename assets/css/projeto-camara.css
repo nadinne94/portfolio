@@ -45,6 +45,12 @@ main.container section:nth-of-type(3) .cards-grid .card-tags {
 }
 
 @media (max-width: 980px) {
+  /* esta página não tem menu hambúrguer: mantém os links visíveis no celular */
+  .nav-social {
+    display: flex;
+    gap: 1rem;
+  }
+
   .project-arch {
     display: grid;
     grid-template-columns: 1fr;
