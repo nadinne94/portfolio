@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Nadinne Cavalcante Silva — Engenheira de Dados Júnior</title>
   <meta name="description" content="Portfólio público de Nadinne Cavalcante Silva, Engenheira de Dados Júnior, com projetos em Engenharia de Dados, PySpark, Azure, Delta Lake, Power BI e currículo público." />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet" />
@@ -17,7 +18,7 @@
 <body>
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a class="nav-logo" href="#" onclick="switchTab('sobre')">NC</a>
+      <a class="nav-logo" href="#sobre" data-tab="sobre">NC</a>
 
       <div class="nav-social">
         <a href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -26,14 +27,14 @@
         <a href="https://medium.com/@nadinne.cavalcante94" target="_blank" rel="noreferrer">Medium</a>
       </div>
 
-      <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
-      <a href="#" onclick="switchTab('sobre');toggleMenu()">Sobre</a>
-      <a href="#" onclick="switchTab('projetos');toggleMenu()">Projetos</a>
-      <a href="#" onclick="switchTab('skills');toggleMenu()">Skills</a>
-      <a href="#" onclick="switchTab('timeline');toggleMenu()">Timeline</a>
+      <a href="#sobre" data-tab="sobre">Sobre</a>
+      <a href="#projetos" data-tab="projetos">Projetos</a>
+      <a href="#skills" data-tab="skills">Skills</a>
+      <a href="#timeline" data-tab="timeline">Timeline</a>
       <a href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank" rel="noreferrer">LinkedIn</a>
       <a href="https://github.com/nadinne94" target="_blank" rel="noreferrer">GitHub</a>
       <a href="mailto:nadinnecavalcantesilva@gmail.com">E-mail</a>
@@ -48,18 +49,451 @@
     </p>
 
     <div class="hero-actions hero-nav">
-      <button class="tab-btn nav-pill active" onclick="switchTab('sobre')">Sobre</button>
-      <button class="tab-btn nav-pill" onclick="switchTab('projetos')">Projetos</button>
-      <button class="tab-btn nav-pill" onclick="switchTab('skills')">Skills</button>
-      <button class="tab-btn nav-pill" onclick="switchTab('timeline')">Timeline</button>
+      <a class="tab-btn nav-pill active" href="#sobre" data-tab="sobre">Sobre</a>
+      <a class="tab-btn nav-pill" href="#projetos" data-tab="projetos">Projetos</a>
+      <a class="tab-btn nav-pill" href="#skills" data-tab="skills">Skills</a>
+      <a class="tab-btn nav-pill" href="#timeline" data-tab="timeline">Timeline</a>
     </div>
   </header>
 
   <main class="container">
-    <div class="tab-content active" id="tab-sobre"></div>
-    <div class="tab-content" id="tab-skills"></div>
-    <div class="tab-content" id="tab-projetos"></div>
-    <div class="tab-content" id="tab-timeline"></div>
+    <div class="tab-content active" id="tab-sobre">
+      <section class="section">
+        <div class="section-header" data-reveal>
+          <div class="gradient-line"></div>
+          <h2>Sobre mim</h2>
+        </div>
+
+        <div class="about-text" data-reveal>
+          <p>
+            Sou formada em <strong>Engenharia Civil</strong> e graduanda em <strong>Análise e Desenvolvimento de Sistemas</strong>, direcionando minha carreira para <strong>Engenharia de Dados</strong>. Minha trajetória combina raciocínio analítico, visão de processos, experiência com dados financeiros e construção de soluções orientadas por dados.
+          </p>
+
+          <p>
+            Na prática, desenvolvo projetos que envolvem ingestão, tratamento, organização, modelagem e disponibilização de dados para análise. Hoje meu principal projeto é o <strong>Monitor Parlamentar</strong>, um pipeline que acompanha mês a mês a atuação dos deputados federais de Minas Gerais, construído com testes, CI/CD e decisões documentadas desde o primeiro commit. Antes dele, criei uma plataforma Lakehouse com dados da Câmara dos Deputados, consumida em Power BI.
+          </p>
+
+          <p>
+            Também tenho vivência profissional em operações financeiras, análise de inconsistências, conciliações, indicadores, relatórios gerenciais e melhoria de processos, o que fortalece minha capacidade de entender problemas de negócio e traduzi-los em soluções de dados úteis e aplicáveis.
+          </p>
+
+          <p>
+            Além dos projetos técnicos, atuo como voluntária na comunidade <strong>Mulheres em Dados</strong>, participando de um ambiente de aprendizado, troca e fortalecimento da presença feminina em dados, tecnologia e analytics.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-content" id="tab-skills">
+      <section class="section">
+        <div class="section-header" data-reveal>
+          <div class="gradient-line"></div>
+          <h2>Skills</h2>
+        </div>
+
+        <p class="lead" data-reveal>
+          Competências organizadas por área de atuação, com foco em Engenharia de Dados, Analytics, BI, cloud e boas práticas de desenvolvimento.
+        </p>
+
+        <div class="skills-layout" data-reveal>
+          <div class="skills-group">
+            <h3>Engenharia de Dados</h3>
+            <p>Construção, organização e disponibilização de dados para consumo analítico.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">ETL/ELT</span>
+              <span class="skill-tag">Pipelines de Dados</span>
+              <span class="skill-tag">APIs REST</span>
+              <span class="skill-tag">Data Lakehouse</span>
+              <span class="skill-tag">Arquitetura Medalhão</span>
+              <span class="skill-tag">Bronze/Silver/Gold</span>
+              <span class="skill-tag">Data Quality</span>
+              <span class="skill-tag">Logs e rastreabilidade</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Processamento e Linguagens</h3>
+            <p>Tratamento, transformação e análise de dados em diferentes volumes e formatos.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">PySpark</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Regex</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Cloud e Plataforma de Dados</h3>
+            <p>Uso de serviços cloud e ambiente Lakehouse para processamento e armazenamento.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">Microsoft Azure</span>
+              <span class="skill-tag">Azure Databricks</span>
+              <span class="skill-tag">Azure Data Lake Storage</span>
+              <span class="skill-tag">Azure SQL Database</span>
+              <span class="skill-tag">Delta Lake</span>
+              <span class="skill-tag">Delta Tables</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Modelagem e Camada Analítica</h3>
+            <p>Estruturação de dados para consultas, indicadores e dashboards.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">Modelagem Dimensional</span>
+              <span class="skill-tag">Star Schema</span>
+              <span class="skill-tag">Fact Tables</span>
+              <span class="skill-tag">Dimension Tables</span>
+              <span class="skill-tag">Data Warehouse</span>
+              <span class="skill-tag">Modelagem Analítica</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Business Intelligence</h3>
+            <p>Criação de análises, indicadores e visualizações para apoio à tomada de decisão.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Power Query</span>
+              <span class="skill-tag">DAX</span>
+              <span class="skill-tag">Dashboards</span>
+              <span class="skill-tag">KPIs</span>
+              <span class="skill-tag">Relatórios gerenciais</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Machine Learning e NLP</h3>
+            <p>Aplicação pontual de classificação textual para enriquecimento de dados.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">MLflow</span>
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">TF-IDF</span>
+              <span class="skill-tag">Classificação textual</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3>Ferramentas e Boas Práticas</h3>
+            <p>Organização, versionamento e documentação de projetos técnicos.</p>
+            <div class="skills-wrap">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Documentação técnica</span>
+              <span class="skill-tag">Organização modular</span>
+              <span class="skill-tag">Versionamento de código</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-content" id="tab-projetos">
+      <section class="section">
+        <div class="section-header" data-reveal>
+          <div class="gradient-line"></div>
+          <h2>Projetos</h2>
+        </div>
+
+        <div class="project-filter" data-reveal>
+          <button class="project-filter-btn active" type="button" data-category="engenharia">
+            Engenharia de Dados
+          </button>
+          <button class="project-filter-btn" type="button" data-category="analytics">
+            Analytics & BI
+          </button>
+          <button class="project-filter-btn" type="button" data-category="bootcamp">
+            Data Analytics Bootcamp
+          </button>
+        </div>
+
+        <div class="project-panel active" id="project-engenharia" data-reveal>
+          <div class="cards-grid">
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <span class="badge">Em desenvolvimento</span>
+                <h3>Monitor Parlamentar</h3>
+                <p>
+                  Pipeline que acompanha, mês a mês, a atuação dos deputados federais de Minas Gerais, com testes automatizados, CI/CD, decisões registradas em ADRs e entregas em versões incrementais.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Pydantic</span>
+                <span class="card-tag">dbt</span>
+                <span class="card-tag">DuckDB</span>
+                <span class="card-tag">GitHub Actions</span>
+              </div>
+
+              <a class="card-link" href="projetos/monitor-parlamentar/">Ver projeto →</a>
+            </div>
+
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Pipeline Lakehouse de Dados Abertos da Câmara</h3>
+                <p>
+                  Plataforma de Engenharia de Dados para dados legislativos, com ingestão via API, Delta Lake, PySpark, arquitetura Medalhão, NLP/ML, Star Schema, Serving e Power BI.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">PySpark</span>
+                <span class="card-tag">Delta Lake</span>
+                <span class="card-tag">API REST</span>
+                <span class="card-tag">Star Schema</span>
+                <span class="card-tag">Power BI</span>
+              </div>
+
+              <a class="card-link" href="projetos/camara/">Ver projeto →</a>
+            </div>
+
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Pipeline AdventureWorks</h3>
+                <p>
+                  Pipeline Lakehouse com camadas Bronze, Silver e Gold, processamento com PySpark e modelagem dimensional na camada analítica.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Databricks</span>
+                <span class="card-tag">PySpark</span>
+                <span class="card-tag">Delta Lake</span>
+                <span class="card-tag">Star Schema</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/pipeline_adventureworks" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Azure End-to-End Data Engineering</h3>
+                <p>
+                  Projeto de arquitetura de dados em Azure com ingestão, armazenamento, transformação e disponibilização de dados para consumo analítico.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Azure</span>
+                <span class="card-tag">Data Lake</span>
+                <span class="card-tag">Synapse</span>
+                <span class="card-tag">Data Engineering</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/azure-end-to-end-data-engineer-project" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-panel" id="project-analytics" data-reveal>
+          <div class="cards-grid">
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Além de Flores e Chocolates, Uma Celebração dos Nossos Direitos e Lutas</h3>
+                <p>
+                  Projeto analítico sobre desigualdade de gênero, com exploração de dados, visualização e comunicação orientada a impacto social.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Analytics</span>
+                <span class="card-tag">Visualização</span>
+                <span class="card-tag">Storytelling</span>
+                <span class="card-tag">Impacto Social</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/desigualdade_genero" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Projeto de Análise das Empresas Listadas na Forbes</h3>
+                <p>
+                  Análise exploratória sobre empresas listadas na Forbes, investigando setores, distribuição geográfica e padrões de valor de mercado.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">Pandas</span>
+                <span class="card-tag">EDA</span>
+                <span class="card-tag">Analytics</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/projeto_forbes_2023" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Análise de Vendas</h3>
+                <p>
+                  Projeto de análise exploratória e consultas SQL para compreender comportamento de compra de clientes e apoiar decisões comerciais.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Python</span>
+                <span class="card-tag">SQL</span>
+                <span class="card-tag">PostgreSQL</span>
+                <span class="card-tag">Análise de Dados</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/analise_vendas" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-panel" id="project-bootcamp" data-reveal>
+          <div class="cards-grid">
+            <div class="card project-card">
+              <div class="card-line"></div>
+
+              <div class="project-card-body">
+                <h3>Bootcamp Data Analytics — WoMakersCode</h3>
+                <p>
+                  Repositório com atividades, estudos e projetos desenvolvidos durante o Bootcamp Data Analytics da WoMakersCode.
+                </p>
+              </div>
+
+              <div class="card-tags">
+                <span class="card-tag">Data Analytics</span>
+                <span class="card-tag">Python</span>
+                <span class="card-tag">SQL</span>
+                <span class="card-tag">Bootcamp</span>
+              </div>
+
+              <a class="card-link" href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank" rel="noreferrer">Ver projeto →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tab-content" id="tab-timeline">
+      <section class="section">
+        <div class="section-header" data-reveal>
+          <div class="gradient-line"></div>
+          <h2>Timeline de carreira</h2>
+        </div>
+
+        <p class="lead" data-reveal>
+          Trajetória construída a partir da experiência em engenharia, gestão, dados financeiros, analytics, BI e projetos práticos em Engenharia de Dados.
+        </p>
+
+        <div class="hero-actions" data-reveal style="margin:1.2rem 0 2rem">
+          <a class="btn primary" href="https://curriculo-nadinne-cavalcate.notion.site/NADINNE-CAVALCANTE-SILVA-387aac25f42980dd9bd3ff4de9edd5c4" target="_blank" rel="noreferrer">Ver currículo</a>
+          <a class="btn" href="https://docs.google.com/document/d/1-4CD690udPIyLNB9ktB4JAGjbs6VVcFQqCe1laft6cs/export?format=pdf" target="_blank" rel="noreferrer">Baixar PDF</a>
+          <a class="btn" href="mailto:nadinnecavalcantesilva@gmail.com">E-mail</a>
+          <a class="btn" href="https://www.linkedin.com/in/nadinne-cavalcante/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://github.com/nadinne94" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <div class="career-timeline" data-reveal>
+          <div class="timeline-entry left">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Lakehouse e Engenharia de Dados</h3>
+              <p>Projeto end-to-end com APIs, PySpark, Delta Lake, Databricks e Power BI.</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry right">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Freelancer BI</h3>
+              <p>Dashboards financeiros, KPIs, Power Query e relatórios analíticos.</p>
+              <p class="timeline-period">Período: jan/2026 — atual</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry left">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Engenharia de Dados e Azure</h3>
+              <p>Aprofundamento em Engenharia de Dados, Azure, Databricks e inglês técnico.</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry right">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Atuação como assistente de dados financeiros</h3>
+              <p>ERPs, conciliações, inconsistências e relatórios gerenciais.</p>
+              <p class="timeline-period">Período: jun/2024 — dez/2025</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry left">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Voluntariado em Mulheres em Dados</h3>
+              <p>Participação em comunidade de dados, tecnologia e desenvolvimento profissional.</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry right">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Fundamentos em Dados e BI</h3>
+              <p>Estudos em Banco de Dados, Power BI, modelagem e relatórios.</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry left">
+            <div class="timeline-date">2021</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Atuação em gestão de negócios</h3>
+              <p>Gestão operacional, controle financeiro, vendas e indicadores.</p>
+              <p class="timeline-period">Período: mar/2021 — mai/2024</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry right">
+            <div class="timeline-date">2019</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Atuação em Engenharia Civil</h3>
+              <p>Experiência com projetos, acompanhamento técnico e relatórios.</p>
+              <p class="timeline-period">Período: jan/2019 — dez/2019</p>
+            </article>
+          </div>
+
+          <div class="timeline-entry left">
+            <div class="timeline-date">2018</div>
+            <div class="timeline-marker"></div>
+            <article class="timeline-card">
+              <h3>Graduação em Engenharia Civil</h3>
+              <p>Base analítica, documentação técnica e resolução de problemas.</p>
+              <p class="timeline-period">Conclusão: set/2018</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
   </main>
 
   <footer class="footer">

@@ -96,12 +96,21 @@
   color: hsl(var(--bg));
 }
 
-.project-panel {
+.js .project-panel {
   display: none;
 }
 
-.project-panel.active {
+.js .project-panel.active {
   display: block;
+}
+
+/* sem JavaScript, os três grupos aparecem em sequência */
+.project-panel + .project-panel {
+  margin-top: 1.5rem;
+}
+
+.js .project-panel + .project-panel {
+  margin-top: 0;
 }
 
 .project-card {

@@ -104,8 +104,10 @@ h1, h2, h3, .nav-logo, .metric strong {
 .tab-btn.active:hover, .btn.primary:hover { background: hsl(var(--fg) / .88); }
 .nav-pill { white-space: nowrap; }
 
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+/* As abas só se escondem quando o JavaScript está ativo;
+   sem ele, as seções aparecem em sequência */
+.js .tab-content { display: none; }
+.js .tab-content.active { display: block; }
 
 /* ---------- Seções ---------- */
 .section { padding-bottom: 3.5rem; }
@@ -169,11 +171,11 @@ h1, h2, h3, .nav-logo, .metric strong {
 .footer-links a:hover { color: hsl(var(--fg)); }
 
 /* ---------- Entrada suave (uma só, discreta) ---------- */
-[data-reveal] { opacity: 0; transform: translateY(.6rem); transition: opacity .5s ease, transform .5s ease; }
-[data-reveal].revealed { opacity: 1; transform: none; }
+.js [data-reveal] { opacity: 0; transform: translateY(.6rem); transition: opacity .5s ease, transform .5s ease; }
+.js [data-reveal].revealed { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .js [data-reveal] { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- Responsivo ---------- */

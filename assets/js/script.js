@@ -1,107 +1,95 @@
-const sections = [
-  { id: 'sobre', file: 'sections/sobre.html' },
-  { id: 'skills', file: 'sections/skills.html' },
-  { id: 'projetos', file: 'sections/projetos.html' },
-  { id: 'timeline', file: 'sections/timeline.html' }
-];
+/*
+ * Todo o conteúdo já está no index.html. Este script só organiza a navegação:
+ * sem JavaScript, as seções aparecem uma embaixo da outra e continuam legíveis.
+ */
 
-async function loadSection(id, file) {
-  const container = document.getElementById(`tab-${id}`);
-  if (!container) return;
+const TABS = ['sobre', 'projetos', 'skills', 'timeline'];
 
-  try {
-    const response = await fetch(file);
-    if (!response.ok) throw new Error(`Erro ao carregar ${file}`);
-    container.innerHTML = await response.text();
-  } catch (error) {
-    container.innerHTML = `
-      <section class="section">
-        <div class="card">
-          <h3>Erro ao carregar seção</h3>
-          <p>Não foi possível carregar o conteúdo de ${file}.</p>
-        </div>
-      </section>
-    `;
-    console.error(error);
+// ---------- Abas (Sobre, Projetos, Skills, Timeline) ----------
+function switchTab(id, { scroll = true } = {}) {
+  if (!TABS.includes(id)) id = 'sobre';
+
+  document.querySelectorAll('.tab-content').forEach(tab => {
+    tab.classList.toggle('active', tab.id === `tab-${id}`);
+  });
+
+  document.querySelectorAll('.tab-btn[data-tab]').forEach(button => {
+    const ativo = button.dataset.tab === id;
+    button.classList.toggle('active', ativo);
+    if (ativo) button.setAttribute('aria-current', 'page');
+    else button.removeAttribute('aria-current');
+  });
+
+  revealIn(document.getElementById(`tab-${id}`));
+
+  if (scroll) {
+    const hero = document.querySelector('.hero-nav');
+    const topo = hero ? hero.getBoundingClientRect().top + window.scrollY - 90 : 0;
+    window.scrollTo({ top: Math.max(topo, 0), behavior: 'smooth' });
   }
 }
 
-async function loadAllSections() {
-  await Promise.all(sections.map(section => loadSection(section.id, section.file)));
-  initRevealAnimations();
-}
-
-function toggleMenu() {
-  document.getElementById('mobile-menu')?.classList.toggle('open');
-}
-
-function switchTab(id) {
-  document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(button => button.classList.remove('active'));
-
-  document.getElementById(`tab-${id}`)?.classList.add('active');
-
-  const labels = {
-    sobre: 'Sobre',
-    skills: 'Skills',
-    projetos: 'Projetos',
-    timeline: 'Timeline'
-  };
-
-  document.querySelectorAll('.tab-btn').forEach(button => {
-    if (button.textContent.trim() === labels[id]) {
-      button.classList.add('active');
-    }
-  });
-
-  document.querySelectorAll(`#tab-${id} [data-reveal]`).forEach(element => {
-    element.classList.remove('revealed');
-    requestAnimationFrame(() => observer.observe(element));
-  });
-
-  window.scrollTo({ top: 96, behavior: 'smooth' });
-}
-
-let observer;
-
-function initRevealAnimations() {
-  observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
-}
-
-function showProjectCategory(category) {
-  document.querySelectorAll('.project-panel').forEach(panel => {
-    panel.classList.remove('active');
-  });
-
-  document.querySelectorAll('.project-filter-btn').forEach(button => {
-    button.classList.remove('active');
-  });
-
-  document.getElementById(`project-${category}`)?.classList.add('active');
-
-  const buttonLabels = {
-    engenharia: 'Engenharia de Dados',
-    analytics: 'Analytics & BI',
-    bootcamp: 'Data Analytics Bootcamp'
-  };
-
-  document.querySelectorAll('.project-filter-btn').forEach(button => {
-    if (button.textContent.trim() === buttonLabels[category]) {
-      button.classList.add('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
+// O endereço guarda a aba aberta (#projetos), então dá para compartilhar o link
+// direto de uma seção e o botão "voltar" do navegador funciona.
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[data-tab]');
+  if (!link) return;
+  event.preventDefault();
+  const id = link.dataset.tab;
+  if (location.hash !== `#${id}`) history.pushState(null, '', `#${id}`);
+  switchTab(id);
+  closeMenu();
 });
 
-window.addEventListener('DOMContentLoaded', loadAllSections);
+window.addEventListener('popstate', () => switchTab(location.hash.slice(1), { scroll: false }));
+
+// ---------- Menu do celular ----------
+const menu = document.getElementById('mobile-menu');
+const toggle = document.querySelector('.nav-toggle');
+
+function closeMenu() {
+  menu?.classList.remove('open');
+  toggle?.setAttribute('aria-expanded', 'false');
+}
+
+toggle?.addEventListener('click', () => {
+  const aberto = menu.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(aberto));
+});
+
+// ---------- Filtro de projetos ----------
+document.querySelectorAll('.project-filter-btn[data-category]').forEach(button => {
+  button.addEventListener('click', () => {
+    const categoria = button.dataset.category;
+
+    document.querySelectorAll('.project-panel').forEach(panel => {
+      panel.classList.toggle('active', panel.id === `project-${categoria}`);
+    });
+    document.querySelectorAll('.project-filter-btn').forEach(outro => {
+      outro.classList.toggle('active', outro === button);
+    });
+
+    revealIn(document.getElementById(`project-${categoria}`));
+  });
+});
+
+// ---------- Entrada suave ao rolar ----------
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+function revealIn(root) {
+  if (!root) return;
+  const alvos = root.matches('[data-reveal]') ? [root] : [];
+  alvos.push(...root.querySelectorAll('[data-reveal]'));
+  alvos.forEach(el => observer.observe(el));
+}
+
+// ---------- Início ----------
+switchTab(location.hash.slice(1), { scroll: false });
+revealIn(document.querySelector('.hero'));
