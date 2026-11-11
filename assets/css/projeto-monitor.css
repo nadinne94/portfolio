@@ -1,0 +1,70 @@
+/* CSS específico da página do projeto Monitor Parlamentar */
+
+/* Fluxo do pipeline: 6 etapas em linha no desktop */
+.monitor-arch {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1.2fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 0.6rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.monitor-arch .arch-node {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.3;
+}
+
+.monitor-arch .arch-arrow {
+  display: flex;
+  align-items: center;
+}
+
+/* Cards de práticas: tags alinhadas na base */
+.monitor-practices .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.monitor-practices .card p {
+  flex: 1;
+}
+
+/* Versão em andamento: marcador vazado em vez de cheio */
+.summary-block--open::before {
+  background: hsl(var(--bg));
+  border: 2px solid hsl(var(--fg));
+}
+
+.monitor-goal {
+  margin-top: 0.5rem;
+}
+
+/* esta página não tem menu hambúrguer: mantém os links visíveis no celular */
+@media (max-width: 980px) {
+  .nav-social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .monitor-arch {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .monitor-arch .arch-node {
+    min-height: 60px;
+  }
+
+  .monitor-arch .arch-arrow {
+    justify-content: center;
+    font-size: 0;
+  }
+
+  .monitor-arch .arch-arrow::after {
+    content: '↓';
+    font-size: 1.05rem;
+  }
+}

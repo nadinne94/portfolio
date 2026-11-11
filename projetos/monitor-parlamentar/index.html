@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Monitor Parlamentar — Nadinne Cavalcante</title>
+  <meta name="description" content="Pipeline de dados que acompanha, mês a mês, a atuação dos deputados federais de Minas Gerais, com Python, Pydantic, dbt, DuckDB, testes automatizados e CI/CD no GitHub Actions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+  <meta name="theme-color" content="#0c2022" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <link rel="stylesheet" href="../../assets/css/projeto-monitor.css" />
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../../index.html">NC</a>
+      <div class="nav-social">
+        <a href="../../index.html">Portfólio</a>
+        <a href="https://github.com/nadinne94/monitor-parlamentar" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://nadinne94.github.io/monitor-parlamentar/" target="_blank" rel="noreferrer">Site</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" data-reveal>
+    <span class="badge">Em desenvolvimento</span>
+    <h1>Monitor<br>Parlamentar</h1>
+    <p class="hero-sub">
+      Pipeline de dados que acompanha, mês a mês, o que os deputados federais de Minas Gerais fazem na Câmara: proposições, votos nominais, presença em plenário e gastos da cota parlamentar.
+    </p>
+    <div class="hero-actions hero-nav">
+      <a class="btn primary" href="https://nadinne94.github.io/monitor-parlamentar/" target="_blank" rel="noreferrer">Ver o site no ar</a>
+      <a class="btn" href="https://github.com/nadinne94/monitor-parlamentar" target="_blank" rel="noreferrer">Código no GitHub</a>
+      <a class="btn" href="../../index.html">Voltar ao portfólio</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Visão geral</h2>
+      </div>
+
+      <div class="project-summary" data-reveal>
+        <div class="summary-block">
+          <span>Objetivo</span>
+          <p>
+            Gerar, todo mês, um retrato da atuação de cada deputado da bancada mineira, a partir da API de Dados Abertos da Câmara. A página oficial organiza esses dados por ano; aqui o recorte é mensal.
+          </p>
+        </div>
+
+        <div class="summary-block">
+          <span>Ponto de partida</span>
+          <p>
+            Meu projeto anterior com dados da Câmara usava Databricks e outras ferramentas em período de teste. Quando os testes expiraram, o pipeline deixou de rodar. Este projeto nasceu com duas regras: custo zero permanente e execução completa na minha máquina com um único comando.
+          </p>
+        </div>
+
+        <div class="summary-block">
+          <span>Como está sendo construído</span>
+          <p>
+            Em incrementos verticais: cada um vai da API até o site publicado e termina numa versão com tag no Git. Nenhum incremento começa com o anterior pela metade, e dúvidas técnicas são resolvidas em spikes curtos antes do código de produção.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Arquitetura do pipeline</h2>
+      </div>
+
+      <div class="arch monitor-arch" data-reveal>
+        <div class="arch-node">API da Câmara</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Ingestão<br>Python + Pydantic</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Parquet<br>em release do GitHub</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">dbt + DuckDB<br>staging, intermediate, marts</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Site estático<br>Jinja2</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">GitHub Pages</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Práticas de engenharia</h2>
+      </div>
+
+      <div class="cards-grid monitor-practices" data-reveal>
+        <div class="card">
+          <h3>Testes desde o primeiro commit</h3>
+          <p>Testes unitários com pytest, testes de ingestão contra respostas gravadas da API (sem depender da rede) e testes de dados no dbt para duplicatas e mapeamentos.</p>
+          <div class="card-tags"><span class="card-tag">pytest</span><span class="card-tag">dbt tests</span><span class="card-tag">Cassetes</span></div>
+        </div>
+
+        <div class="card">
+          <h3>CI/CD no GitHub Actions</h3>
+          <p>Todo trabalho entra por pull request e passa por três verificações: qualidade, testes e transformação. Cada merge na main executa o pipeline e publica o site.</p>
+          <div class="card-tags"><span class="card-tag">GitHub Actions</span><span class="card-tag">pre-commit</span><span class="card-tag">Ruff</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Decisões documentadas</h3>
+          <p>Escopo, stack, contrato de dados e mudanças de rota ficam registrados em ADRs. As investigações sobre cada parte da API ficam em notas de spike.</p>
+          <div class="card-tags"><span class="card-tag">ADRs</span><span class="card-tag">Spikes</span><span class="card-tag">Roadmap</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Resiliente a uma API instável</h3>
+          <p>A API da Câmara responde com erros 504 com frequência. O cliente HTTP repete as chamadas com espera crescente, e os dados brutos ficam guardados numa release do GitHub, então o site é publicado mesmo com a API fora do ar.</p>
+          <div class="card-tags"><span class="card-tag">httpx</span><span class="card-tag">tenacity</span><span class="card-tag">Parquet</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Contrato canônico de dados</h3>
+          <p>As fontes são convertidas para um modelo comum de fatos e dimensões, com contrato aplicado nos marts. Novas fontes entram sem mexer no resto do pipeline.</p>
+          <div class="card-tags"><span class="card-tag">Modelagem dimensional</span><span class="card-tag">dbt contracts</span></div>
+        </div>
+
+        <div class="card">
+          <h3>Validação na entrada</h3>
+          <p>Cada recurso da API tem um modelo Pydantic. Dado fora do formato esperado é barrado na ingestão, antes de chegar às tabelas analíticas.</p>
+          <div class="card-tags"><span class="card-tag">Pydantic</span><span class="card-tag">Data Quality</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header" data-reveal>
+        <div class="gradient-line"></div>
+        <h2>Versões entregues</h2>
+      </div>
+
+      <div class="project-summary" data-reveal>
+        <div class="summary-block">
+          <span>v0.0.1: Esqueleto andante</span>
+          <p>Estrutura do repositório, CI, projeto dbt, gerador de site e deploy. Um push na main já deixava a página publicada.</p>
+        </div>
+        <div class="summary-block">
+          <span>v0.1.0: Deputados de MG</span>
+          <p>Primeiros dados reais no site: a bancada mineira em exercício.</p>
+        </div>
+        <div class="summary-block">
+          <span>v0.2.0: Proposições</span>
+          <p>Proposições de cada mês na página de cada deputado, separando autoria de coautoria, e persistência dos dados brutos em release do GitHub.</p>
+        </div>
+        <div class="summary-block summary-block--open">
+          <span>Em andamento: votos nominais</span>
+          <p>Ingestão mensal das votações do Plenário e o voto de cada deputado. Depois vêm presença em plenário e gastos da cota parlamentar.</p>
+        </div>
+      </div>
+
+      <p class="lead monitor-goal" data-reveal>
+        A meta é ter o pipeline operando sozinho em fevereiro de 2027, no início da nova legislatura, com o primeiro relatório mensal publicado em março.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="../../index.html">Voltar ao portfólio</a>
+      <a href="https://github.com/nadinne94/monitor-parlamentar" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://nadinne94.github.io/monitor-parlamentar/" target="_blank" rel="noreferrer">Site do projeto</a>
+    </div>
+    <p>© 2026 — Nadinne Cavalcante Silva</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('revealed');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('[data-reveal]').forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
