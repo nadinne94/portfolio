@@ -165,6 +165,13 @@ h1, h2, h3, .nav-logo, .metric strong {
 .card-link { display: inline-flex; margin-top: 1rem; color: hsl(var(--fg)); font-size: .95rem; font-weight: 600; text-decoration: underline; text-decoration-color: hsl(var(--muted-fg) / .5); text-underline-offset: .25em; }
 .card-link:hover { text-decoration-color: hsl(var(--fg)); }
 
+/* Rodapé do card: "Ver projeto" à esquerda e, quando houver, o status à direita.
+   Fica na mesma linha em todos os cards, então os títulos continuam alinhados. */
+.card-footer { margin-top: auto; padding-top: 1rem; display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+.card .card-footer .card-link { margin-top: 0; padding-top: 0; }
+.card-status { display: inline-flex; align-items: center; gap: .45rem; font-size: .82rem; color: hsl(var(--faint-fg)); }
+.card-status::before { content: ""; align-self: center; width: 7px; height: 7px; border-radius: 999px; background: hsl(var(--muted-fg)); }
+
 /* Card inteiro clicável: o link do título se estende por todo o card */
 .card-title-link { color: inherit; }
 .card-title-link::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
