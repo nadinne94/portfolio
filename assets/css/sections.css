@@ -165,8 +165,8 @@
   align-self: start;
   color: hsl(var(--fg));
   font-weight: 800;
-  font-stretch: 75%;
-  font-variation-settings: "wdth" 75;
+  font-stretch: 100%;
+  font-variation-settings: "wdth" 100;
   font-size: 1.5rem;
   line-height: 1;
   padding-top: 0.95rem;

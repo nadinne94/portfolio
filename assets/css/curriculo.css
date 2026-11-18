@@ -5,7 +5,7 @@
 .cv { max-width: 52rem; margin: 0 auto; padding: 8.5rem 1.5rem 3rem; }
 
 .cv-header { margin-bottom: 2.5rem; }
-.cv-header h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: .95; margin-bottom: .8rem; }
+.cv-header h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); line-height: 1; margin-bottom: .8rem; text-wrap: balance; }
 .cv-role { font-size: 1.3rem; font-weight: 600; color: hsl(var(--fg)); }
 .cv-stack { color: hsl(var(--muted-fg)); margin-bottom: 1rem; }
 .cv-contacts { list-style: none; display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; color: hsl(var(--faint-fg)); font-size: .95rem; }

@@ -47,9 +47,9 @@ img, iframe { max-width: 100%; }
 h1, h2, h3, .nav-logo, .metric strong {
   font-family: var(--font);
   font-weight: 800;
-  font-stretch: 75%;
-  font-variation-settings: "wdth" 75;
-  letter-spacing: -.005em;
+  font-stretch: 100%;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: -.02em;
   color: hsl(var(--fg));
 }
 
