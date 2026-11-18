@@ -43,6 +43,9 @@ document.addEventListener('click', event => {
 
 window.addEventListener('popstate', () => switchTab(location.hash.slice(1), { scroll: false }));
 
+// Rede de segurança: qualquer mudança de #aba no endereço abre a aba certa
+window.addEventListener('hashchange', () => switchTab(location.hash.slice(1), { scroll: false }));
+
 // ---------- Menu do celular ----------
 const menu = document.getElementById('mobile-menu');
 const toggle = document.querySelector('.nav-toggle');
