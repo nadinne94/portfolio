@@ -376,3 +376,25 @@
     font-size: 0.76rem !important;
   }
 }
+
+/* Projetos de análise (antes da engenharia): lista compacta, sem cards */
+.early-projects { margin-top: 3rem; }
+.early-projects h3 { font-size: 1.45rem; line-height: 1.05; margin-bottom: .35rem; }
+.early-projects > p { color: hsl(var(--muted-fg)); font-size: .95rem; margin-bottom: 1rem; }
+.early-list { list-style: none; border-top: 1px solid hsl(var(--border)); }
+.early-list li { border-bottom: 1px solid hsl(var(--border)); }
+.early-list a { display: grid; grid-template-columns: minmax(12rem, 1fr) 1.4fr auto; gap: 1rem; align-items: baseline; padding: .85rem 0; transition: color .2s; }
+.early-name { font-weight: 600; color: hsl(var(--fg)); }
+.early-desc { color: hsl(var(--muted-fg)); font-size: .95rem; }
+.early-year { color: hsl(var(--faint-fg)); font-size: .9rem; }
+.early-list a:hover .early-name { text-decoration: underline; text-underline-offset: .2em; text-decoration-color: hsl(var(--muted-fg) / .6); }
+
+@media (max-width: 640px) {
+  .early-list a { grid-template-columns: 1fr auto; gap: .1rem .75rem; }
+  .early-desc { grid-column: 1 / -1; grid-row: 2; }
+}
+
+/* 4 projetos de engenharia em grade 2 x 2, sem card sobrando sozinho */
+@media (min-width: 1040px) {
+  .project-panel-main .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}

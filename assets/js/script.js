@@ -60,22 +60,6 @@ toggle?.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', String(aberto));
 });
 
-// ---------- Filtro de projetos ----------
-document.querySelectorAll('.project-filter-btn[data-category]').forEach(button => {
-  button.addEventListener('click', () => {
-    const categoria = button.dataset.category;
-
-    document.querySelectorAll('.project-panel').forEach(panel => {
-      panel.classList.toggle('active', panel.id === `project-${categoria}`);
-    });
-    document.querySelectorAll('.project-filter-btn').forEach(outro => {
-      outro.classList.toggle('active', outro === button);
-    });
-
-    revealIn(document.getElementById(`project-${categoria}`));
-  });
-});
-
 // ---------- Entrada suave ao rolar ----------
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {

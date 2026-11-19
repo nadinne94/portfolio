@@ -23,8 +23,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <meta name="theme-color" content="#0c2022" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261120" />
-  <link rel="stylesheet" href="assets/css/sections.css?v=20261120" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261121" />
+  <link rel="stylesheet" href="assets/css/sections.css?v=20261121" />
 </head>
 
 <body>
@@ -218,19 +218,7 @@
           <h2>Projetos</h2>
         </div>
 
-        <div class="project-filter" data-reveal>
-          <button class="project-filter-btn active" type="button" data-category="engenharia">
-            Engenharia de Dados
-          </button>
-          <button class="project-filter-btn" type="button" data-category="analytics">
-            Analytics & BI
-          </button>
-          <button class="project-filter-btn" type="button" data-category="bootcamp">
-            Data Analytics Bootcamp
-          </button>
-        </div>
-
-        <div class="project-panel active" id="project-engenharia" data-reveal>
+        <div class="project-panel-main" id="project-engenharia" data-reveal>
           <div class="cards-grid">
             <div class="card project-card">
               <div class="card-line"></div>
@@ -319,92 +307,15 @@
           </div>
         </div>
 
-        <div class="project-panel" id="project-analytics" data-reveal>
-          <div class="cards-grid">
-            <div class="card project-card">
-              <div class="card-line"></div>
-
-              <div class="project-card-body">
-                <h3><a class="card-title-link" href="https://github.com/nadinne94/desigualdade_genero" target="_blank" rel="noreferrer">Além de Flores e Chocolates, Uma Celebração dos Nossos Direitos e Lutas</a></h3>
-                <p>
-                  Projeto analítico sobre desigualdade de gênero, com exploração de dados, visualização e comunicação orientada a impacto social.
-                </p>
-              </div>
-
-              <div class="card-tags">
-                <span class="card-tag">Analytics</span>
-                <span class="card-tag">Visualização</span>
-                <span class="card-tag">Storytelling</span>
-                <span class="card-tag">Impacto Social</span>
-              </div>
-
-              <span class="card-link" aria-hidden="true">Ver projeto →</span>
-            </div>
-
-            <div class="card project-card">
-              <div class="card-line"></div>
-
-              <div class="project-card-body">
-                <h3><a class="card-title-link" href="https://github.com/nadinne94/projeto_forbes_2023" target="_blank" rel="noreferrer">Projeto de Análise das Empresas Listadas na Forbes</a></h3>
-                <p>
-                  Análise exploratória sobre empresas listadas na Forbes, investigando setores, distribuição geográfica e padrões de valor de mercado.
-                </p>
-              </div>
-
-              <div class="card-tags">
-                <span class="card-tag">Python</span>
-                <span class="card-tag">Pandas</span>
-                <span class="card-tag">EDA</span>
-                <span class="card-tag">Analytics</span>
-              </div>
-
-              <span class="card-link" aria-hidden="true">Ver projeto →</span>
-            </div>
-
-            <div class="card project-card">
-              <div class="card-line"></div>
-
-              <div class="project-card-body">
-                <h3><a class="card-title-link" href="https://github.com/nadinne94/analise_vendas" target="_blank" rel="noreferrer">Análise de Vendas</a></h3>
-                <p>
-                  Projeto de análise exploratória e consultas SQL para compreender comportamento de compra de clientes e apoiar decisões comerciais.
-                </p>
-              </div>
-
-              <div class="card-tags">
-                <span class="card-tag">Python</span>
-                <span class="card-tag">SQL</span>
-                <span class="card-tag">PostgreSQL</span>
-                <span class="card-tag">Análise de Dados</span>
-              </div>
-
-              <span class="card-link" aria-hidden="true">Ver projeto →</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-panel" id="project-bootcamp" data-reveal>
-          <div class="cards-grid">
-            <div class="card project-card">
-              <div class="card-line"></div>
-
-              <div class="project-card-body">
-                <h3><a class="card-title-link" href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank" rel="noreferrer">Bootcamp Data Analytics — WoMakersCode</a></h3>
-                <p>
-                  Repositório com atividades, estudos e projetos desenvolvidos durante o Bootcamp Data Analytics da WoMakersCode.
-                </p>
-              </div>
-
-              <div class="card-tags">
-                <span class="card-tag">Data Analytics</span>
-                <span class="card-tag">Python</span>
-                <span class="card-tag">SQL</span>
-                <span class="card-tag">Bootcamp</span>
-              </div>
-
-              <span class="card-link" aria-hidden="true">Ver projeto →</span>
-            </div>
-          </div>
+        <div class="early-projects" data-reveal>
+          <h3>Antes da engenharia</h3>
+          <p>Projetos de análise de dados de 2023 e 2024, do início da minha transição para a área.</p>
+          <ul class="early-list">
+            <li><a href="https://github.com/nadinne94/desigualdade_genero" target="_blank" rel="noreferrer"><span class="early-name">Desigualdade de gênero</span><span class="early-desc">Análise exploratória e visualização</span><span class="early-year">2024</span></a></li>
+            <li><a href="https://github.com/nadinne94/projeto_forbes_2023" target="_blank" rel="noreferrer"><span class="early-name">Empresas da Forbes</span><span class="early-desc">Análise exploratória por setor e país</span><span class="early-year">2024</span></a></li>
+            <li><a href="https://github.com/nadinne94/bootcamp-dataanalytics" target="_blank" rel="noreferrer"><span class="early-name">Bootcamp Data Analytics — WoMakersCode</span><span class="early-desc">Python, SQL e visualização</span><span class="early-year">2024</span></a></li>
+            <li><a href="https://github.com/nadinne94/analise_vendas" target="_blank" rel="noreferrer"><span class="early-name">Análise de vendas</span><span class="early-desc">Consultas SQL sobre comportamento de compra</span><span class="early-year">2023</span></a></li>
+          </ul>
         </div>
       </section>
     </div>
@@ -550,6 +461,6 @@
     <p>© 2026 — Nadinne Cavalcante</p>
   </footer>
 
-  <script src="assets/js/script.js?v=20261120"></script>
+  <script src="assets/js/script.js?v=20261121"></script>
 </body>
 </html>
